@@ -1,3 +1,4 @@
+// Imports ------------------------------------------------
 import React from "react";
 import clsx from "clsx";
 import { makeStyles, useTheme } from "@material-ui/core/styles";
@@ -15,7 +16,7 @@ import ChevronRightIcon from "@material-ui/icons/ChevronRight";
 import ListItem from "@material-ui/core/ListItem";
 import ListItemIcon from "@material-ui/core/ListItemIcon";
 import ListItemText from "@material-ui/core/ListItemText";
-import { grey, blueGrey } from "@material-ui/core/colors";
+import { grey, blueGrey, teal } from "@material-ui/core/colors";
 import CameraAltIcon from "@material-ui/icons/CameraAlt";
 import CodeIcon from "@material-ui/icons/Code";
 import InfoIcon from "@material-ui/icons/Info";
@@ -26,17 +27,35 @@ import LinkedInIcon from "@material-ui/icons/LinkedIn";
 import InstagramIcon from "@material-ui/icons/Instagram";
 import TwitterIcon from "@material-ui/icons/Twitter";
 import Paragraph from "../components/paragraph";
+import { Route, BrowserRouter as Router, Switch, Link } from "react-router-dom";
+import Home from "./Home";
+import Photography from "./Photography";
+import Coding from "./Coding";
+
 // import { AccessAlarm, ThreeDRotation } from "@material-ui/icons";
 
 const drawerWidth = 240;
-
+const colors = {
+  blue: `#335c67`,
+  yellow: `#fff3b0`,
+  orange: `#e09f3e`,
+  red: `#9e2a2b`,
+  maroon: `#540b0e`,
+  grey1: `#cfdbd5`,
+  grey2: `#e8eddf`,
+  primary: `#f5cb5c`,
+  dark: `#242423`,
+  darkGrey: `#333533`,
+};
+// Use Styles ---------------------------------------------
 const useStyles = makeStyles((theme) => ({
   root: {
     display: "flex",
   },
   appBar: {
     zIndex: theme.zIndex.drawer + 1,
-    backgroundColor: blueGrey[400],
+    backgroundColor: colors.blue,
+
     transition: theme.transitions.create(["width", "margin"], {
       easing: theme.transitions.easing.sharp,
       duration: theme.transitions.duration.leavingScreen,
@@ -93,6 +112,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
+// export -------------------------------------------------
 export default function Main() {
   const classes = useStyles();
   const theme = useTheme();
@@ -106,11 +126,15 @@ export default function Main() {
     setOpen(false);
   };
 
+  // const sideBarLink = () => {
+  //   if (key === "About Me")
+  // };
+
   return (
     <div className={classes.root}>
       <CssBaseline />
       <AppBar
-        position="fixed"
+        position='fixed'
         // color="lightBlue"
         className={clsx(classes.appBar, {
           [classes.appBarShift]: open,
@@ -118,23 +142,23 @@ export default function Main() {
       >
         <Toolbar>
           <IconButton
-            color="inherit"
-            aria-label="open drawer"
+            color='inherit'
+            aria-label='open drawer'
             onClick={handleDrawerOpen}
-            edge="start"
+            edge='start'
             className={clsx(classes.menuButton, {
               [classes.hide]: open,
             })}
           >
             <MenuIcon />
           </IconButton>
-          <Typography variant="h6" noWrap>
-            Zac Edens
+          <Typography variant='h6' noWrap>
+            Zac Edens Portfolio
           </Typography>
         </Toolbar>
       </AppBar>
       <Drawer
-        variant="permanent"
+        variant='permanent'
         className={clsx(classes.drawer, {
           [classes.drawerOpen]: open,
           [classes.drawerClose]: !open,
@@ -157,64 +181,86 @@ export default function Main() {
         </div>
         <Divider />
         <List>
-          {["About Me"].map((text, index) => (
-            <ListItem button key={text}>
+          <Link to={"/"}>
+            <ListItem button key={"About Me"}>
               <ListItemIcon>
-                {index % 2 === 0 ? <InfoIcon /> : <CodeIcon />}
+                <InfoIcon />
               </ListItemIcon>
-              <ListItemText primary={text} />
+              <ListItemText primary={"About Me"} />
             </ListItem>
-          ))}
+          </Link>
         </List>
         <Divider />
         <List>
-          {["Photography", "Web Dev"].map((text, index) => (
-            <ListItem button key={text}>
+          <Link to={"/photography"}>
+            <ListItem button key={"Photography"}>
               <ListItemIcon>
-                {index % 2 === 0 ? <CameraAltIcon /> : <CodeIcon />}
+                <CameraAltIcon />
               </ListItemIcon>
-              <ListItemText primary={text} />
+              <ListItemText primary={"Photography"} />
             </ListItem>
-          ))}
+          </Link>
+          <Link to={"/coding"}>
+            <ListItem button key={"Web Dev"}>
+              <ListItemIcon>
+                <CodeIcon />
+              </ListItemIcon>
+              <ListItemText primary={"Web Dev"} />
+            </ListItem>
+          </Link>
+          <ListItem button key={"Videography"}>
+            <ListItemIcon>
+              <VideocamIcon />
+            </ListItemIcon>
+            <ListItemText primary={"Videography"} />
+          </ListItem>
         </List>
         <Divider />
         <List>
-          {["Videography", "Email"].map((text, index) => (
-            <ListItem button key={text}>
-              <ListItemIcon>
-                {index % 2 === 0 ? <VideocamIcon /> : <EmailIcon />}
-              </ListItemIcon>
-              <ListItemText primary={text} />
-            </ListItem>
-          ))}
+          <ListItem button key={"Email"}>
+            <ListItemIcon>
+              <EmailIcon />
+            </ListItemIcon>
+            <ListItemText primary={"Email"} />
+          </ListItem>
+          <ListItem button key={"Github"}>
+            <ListItemIcon>
+              <GitHubIcon />
+            </ListItemIcon>
+            <ListItemText primary={"Github"} />
+          </ListItem>
+          <ListItem button key={"LinkedIn"}>
+            <ListItemIcon>
+              <LinkedInIcon />
+            </ListItemIcon>
+            <ListItemText primary={"LinkedIn"} />
+          </ListItem>
         </List>
         <Divider />
         <List>
-          {["Github", "LinkedIn"].map((text, index) => (
-            <ListItem button key={text}>
-              <ListItemIcon>
-                {index % 2 === 0 ? <GitHubIcon /> : <LinkedInIcon />}
-              </ListItemIcon>
-              <ListItemText primary={text} />
-            </ListItem>
-          ))}
-        </List>
-        <Divider />
-        <List>
-          {["Instagram", "Twitter"].map((text, index) => (
-            <ListItem button key={text}>
-              <ListItemIcon>
-                {index % 2 === 0 ? <InstagramIcon /> : <TwitterIcon />}
-              </ListItemIcon>
-              <ListItemText primary={text} />
-            </ListItem>
-          ))}
+          <ListItem button key={"Instagram"}>
+            <ListItemIcon>
+              <InstagramIcon />
+            </ListItemIcon>
+            <ListItemText primary={"Instagram"} />
+          </ListItem>
+          <ListItem button key={"Twitter"}>
+            <ListItemIcon>
+              <TwitterIcon />
+            </ListItemIcon>
+            <ListItemText primary={"Twitter"} />
+          </ListItem>
         </List>
         <Divider />
       </Drawer>
       <main className={classes.content}>
         <div className={classes.toolbar} />
-        <Paragraph />
+
+        <Switch>
+          <Route exact path='/' component={Home} />
+          <Route exact path='/photography' component={Photography} />
+          <Route exact path='/coding' component={Coding} />
+        </Switch>
       </main>
     </div>
   );
