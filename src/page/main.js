@@ -31,6 +31,7 @@ import { Route, BrowserRouter as Router, Switch, Link } from "react-router-dom";
 import Home from "./Home";
 import Photography from "./Photography";
 import Coding from "./Coding";
+import { SwipeableDrawer } from "@material-ui/core";
 
 // import { AccessAlarm, ThreeDRotation } from "@material-ui/icons";
 
@@ -39,6 +40,7 @@ const colors = {
   blue: `#335c67`,
   yellow: `#fff3b0`,
   orange: `#e09f3e`,
+  paleOrange: `#ffefd6`,
   red: `#9e2a2b`,
   maroon: `#540b0e`,
   grey1: `#cfdbd5`,
@@ -54,7 +56,7 @@ const useStyles = makeStyles((theme) => ({
   },
   appBar: {
     zIndex: theme.zIndex.drawer + 1,
-    backgroundColor: colors.blue,
+    backgroundColor: colors.orange,
 
     transition: theme.transitions.create(["width", "margin"], {
       easing: theme.transitions.easing.sharp,
@@ -82,6 +84,7 @@ const useStyles = makeStyles((theme) => ({
   },
   drawerOpen: {
     width: drawerWidth,
+    backgroundColor: colors.paleOrange,
     transition: theme.transitions.create("width", {
       easing: theme.transitions.easing.sharp,
       duration: theme.transitions.duration.enteringScreen,
@@ -157,7 +160,7 @@ export default function Main() {
           </Typography>
         </Toolbar>
       </AppBar>
-      <Drawer
+      <SwipeableDrawer
         variant='permanent'
         className={clsx(classes.drawer, {
           [classes.drawerOpen]: open,
@@ -217,7 +220,13 @@ export default function Main() {
         </List>
         <Divider />
         <List>
-          <ListItem button key={"Email"}>
+          <ListItem
+            button
+            key={"Email"}
+            onClick={() => {
+              navigator.clipboard.writeText("edens.zac@gmail.com");
+            }}
+          >
             <ListItemIcon>
               <EmailIcon />
             </ListItemIcon>
@@ -252,7 +261,7 @@ export default function Main() {
           </ListItem>
         </List>
         <Divider />
-      </Drawer>
+      </SwipeableDrawer>
       <main className={classes.content}>
         <div className={classes.toolbar} />
 
