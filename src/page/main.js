@@ -40,7 +40,7 @@ const colors = {
   blue: `#335c67`,
   yellow: `#fff3b0`,
   orange: `#e09f3e`,
-  paleOrange: `#ffefd6`,
+  paleOrange: `#fff5db`,
   red: `#9e2a2b`,
   maroon: `#540b0e`,
   grey1: `#cfdbd5`,
@@ -162,6 +162,7 @@ export default function Main() {
       </AppBar>
       <SwipeableDrawer
         variant='permanent'
+        onClick={handleDrawerClose}
         className={clsx(classes.drawer, {
           [classes.drawerOpen]: open,
           [classes.drawerClose]: !open,
