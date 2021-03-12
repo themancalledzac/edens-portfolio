@@ -1,9 +1,11 @@
 import { Container, Grid, makeStyles } from "@material-ui/core";
 import React from "react";
 import colors from "../../components/colors";
-import Paragraph from "../../components/paragraph";
+import AboutMe from "../../components/AboutMe";
 import PhotoHome from "../../components/PhotoHome";
 import WebDevHome from "../../components/WebDevHome";
+// import { useStoreContext } from "../../utils/GlobalState";
+import { useSelector } from "react-redux";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -24,13 +26,24 @@ const useStyles = makeStyles((theme) => ({
 
 const Home = () => {
   const classes = useStyles();
+  // const [state] = useStoreContext();
+  // const changeState = useSelector((state) => state.home.web.state);
+  const changeWebState = useSelector((state) => state.changeWebState);
+  const changePhotoState = useSelector((state) => state.changePhotoState);
+  // const web = state.home.web.state;
+  // const photo = state.home.photo.state;
+  // console.log(web);
+  // console.log(photo);
+
   return (
     <div className={classes.root}>
       <Container maxWidth='md'>
-        <Paragraph />
+        <AboutMe />
         <Grid container spacing={3}>
-          <WebDevHome />
-          <PhotoHome />
+          {changePhotoState ? "" : <WebDevHome />}
+          {changeWebState ? "" : <PhotoHome />}
+          {/* <WebDevHome />
+          <PhotoHome />*/}
         </Grid>
       </Container>
     </div>

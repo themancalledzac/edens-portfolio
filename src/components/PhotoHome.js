@@ -1,6 +1,10 @@
-import { Grid, makeStyles, Paper } from "@material-ui/core";
+import { Button, Grid, makeStyles, Paper } from "@material-ui/core";
 import React from "react";
+// import { HOME_PHOTO_FULL } from "../utils/actions";
+// import { useStoreContext } from "../utils/GlobalState";
 import colors from "./colors";
+import { useSelector, useDispatch } from "react-redux";
+import { CHANGE_PHOTO_STATE, CHANGE_WIDTH, RESET } from "../utils/actions";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -18,17 +22,33 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: colors.primary,
   },
 }));
+// <Grid item xs={12} sm={state.home.photo.gridWidth}>
 
 const PhotoHome = () => {
   const classes = useStyles();
+  // const [state, dispatch] = useStoreContext();
+
+  const changeWidth = useSelector((gridWidth) => gridWidth.changeWidth);
+  const dispatch = useDispatch();
+  const fullChange = () => {
+    if (changeWidth === 6) {
+      dispatch(CHANGE_PHOTO_STATE());
+      dispatch(CHANGE_WIDTH());
+    } else dispatch(RESET());
+  };
+
   return (
-    <Grid item xs={12} sm={6}>
+    <Grid item xs={12} sm={changeWidth}>
       <div className={classes.root}>
         <Grid container spacing={3}>
           <Grid item xs={12}>
-            <Paper className={(classes.paper, classes.header)}>
+            <Button
+              style={{ width: "100%" }}
+              className={(classes.paper, classes.header)}
+              onClick={() => fullChange()}
+            >
               Photography
-            </Paper>
+            </Button>
           </Grid>
 
           <Grid item xs={12} sm={6}>

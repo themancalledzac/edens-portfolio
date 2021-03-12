@@ -16,7 +16,6 @@ import ChevronRightIcon from "@material-ui/icons/ChevronRight";
 import ListItem from "@material-ui/core/ListItem";
 import ListItemIcon from "@material-ui/core/ListItemIcon";
 import ListItemText from "@material-ui/core/ListItemText";
-import { grey, blueGrey, teal } from "@material-ui/core/colors";
 import CameraAltIcon from "@material-ui/icons/CameraAlt";
 import CodeIcon from "@material-ui/icons/Code";
 import InfoIcon from "@material-ui/icons/Info";
@@ -26,29 +25,24 @@ import GitHubIcon from "@material-ui/icons/GitHub";
 import LinkedInIcon from "@material-ui/icons/LinkedIn";
 import InstagramIcon from "@material-ui/icons/Instagram";
 import TwitterIcon from "@material-ui/icons/Twitter";
-import Paragraph from "../components/paragraph";
-import { Route, BrowserRouter as Router, Switch, Link } from "react-router-dom";
+import { Route, Switch, Link } from "react-router-dom";
 import Home from "./Home";
 import Photography from "./Photography";
 import Coding from "./Coding";
-import { SwipeableDrawer } from "@material-ui/core";
+// import { SwipeableDrawer } from "@material-ui/core";
+import colors from "../components/colors";
+import { useDispatch, useSelector } from "react-redux";
+import {
+  CHANGE_WEB_STATE,
+  CHANGE_PHOTO_STATE,
+  RESET,
+  CHANGE_WIDTH,
+} from "../utils/actions";
 
 // import { AccessAlarm, ThreeDRotation } from "@material-ui/icons";
 
 const drawerWidth = 240;
-const colors = {
-  blue: `#335c67`,
-  yellow: `#fff3b0`,
-  orange: `#e09f3e`,
-  paleOrange: `#fff5db`,
-  red: `#9e2a2b`,
-  maroon: `#540b0e`,
-  grey1: `#cfdbd5`,
-  grey2: `#e8eddf`,
-  primary: `#f5cb5c`,
-  dark: `#242423`,
-  darkGrey: `#333533`,
-};
+
 // Use Styles ---------------------------------------------
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -120,6 +114,8 @@ export default function Main() {
   const classes = useStyles();
   const theme = useTheme();
   const [open, setOpen] = React.useState(false);
+  const changeWebState = useSelector((state) => state.changeWebState);
+  const changePhotoState = useSelector((state) => state.changePhotoState);
 
   const handleDrawerOpen = () => {
     setOpen(true);
@@ -127,6 +123,22 @@ export default function Main() {
 
   const handleDrawerClose = () => {
     setOpen(false);
+  };
+  const dispatch = useDispatch();
+  const clickWeb = () => {
+    if (changeWebState === false) {
+      dispatch(CHANGE_WEB_STATE());
+      dispatch(CHANGE_WIDTH());
+    } else dispatch(RESET());
+  };
+  const clickPhoto = () => {
+    if (changePhotoState === false) {
+      dispatch(CHANGE_PHOTO_STATE());
+      dispatch(CHANGE_WIDTH());
+    } else dispatch(RESET());
+  };
+  const clickAbout = () => {
+    dispatch(RESET());
   };
 
   // const sideBarLink = () => {
@@ -160,7 +172,7 @@ export default function Main() {
           </Typography>
         </Toolbar>
       </AppBar>
-      <SwipeableDrawer
+      <Drawer
         variant='permanent'
         onClick={handleDrawerClose}
         className={clsx(classes.drawer, {
@@ -186,7 +198,7 @@ export default function Main() {
         <Divider />
         <List>
           <Link to={"/"}>
-            <ListItem button key={"About Me"}>
+            <ListItem button key={"About Me"} onClick={() => clickAbout()}>
               <ListItemIcon>
                 <InfoIcon />
               </ListItemIcon>
@@ -196,28 +208,22 @@ export default function Main() {
         </List>
         <Divider />
         <List>
-          <Link to={"/photography"}>
-            <ListItem button key={"Photography"}>
+          <Link to={"/"}>
+            <ListItem button key={"Photography"} onClick={() => clickPhoto()}>
               <ListItemIcon>
                 <CameraAltIcon />
               </ListItemIcon>
               <ListItemText primary={"Photography"} />
             </ListItem>
           </Link>
-          <Link to={"/coding"}>
-            <ListItem button key={"Web Dev"}>
+          <Link to={"/"}>
+            <ListItem button key={"Web Dev"} onClick={() => clickWeb()}>
               <ListItemIcon>
                 <CodeIcon />
               </ListItemIcon>
               <ListItemText primary={"Web Dev"} />
             </ListItem>
           </Link>
-          <ListItem button key={"Videography"}>
-            <ListItemIcon>
-              <VideocamIcon />
-            </ListItemIcon>
-            <ListItemText primary={"Videography"} />
-          </ListItem>
         </List>
         <Divider />
         <List>
@@ -262,7 +268,7 @@ export default function Main() {
           </ListItem>
         </List>
         <Divider />
-      </SwipeableDrawer>
+      </Drawer>
       <main className={classes.content}>
         <div className={classes.toolbar} />
 
