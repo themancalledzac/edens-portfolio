@@ -20,6 +20,26 @@ export const CHANGE_WIDTH = () => {
     type: "CHANGE_WIDTH",
   };
 };
+export const WEB_ABOUT = () => {
+  return {
+    type: "WEB_ABOUT",
+  };
+};
+export const PHOTO_ABOUT = () => {
+  return {
+    type: "PHOTO_ABOUT",
+  };
+};
+export const PHOTO_TITLE = () => {
+  return {
+    type: "PHOTO_TITLE",
+  };
+};
+export const WEB_TITLE = () => {
+  return {
+    type: "WEB_TITLE",
+  };
+};
 export const RESET = () => {
   return {
     type: "RESET",

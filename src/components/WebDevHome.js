@@ -4,7 +4,13 @@ import colors from "./colors";
 // import { useStoreContext } from "../utils/GlobalState";
 // import { HOME_WEB_FULL } from "../utils/actions";
 import { useSelector, useDispatch } from "react-redux";
-import { CHANGE_WEB_STATE, CHANGE_WIDTH, RESET } from "../utils/actions";
+import {
+  CHANGE_WEB_STATE,
+  CHANGE_WIDTH,
+  RESET,
+  WEB_TITLE,
+  WEB_ABOUT,
+} from "../utils/actions";
 import ProjectOne from "./ProjectOne";
 import ProjectTwo from "./ProjectTwo";
 
@@ -41,6 +47,8 @@ const WebDevHome = () => {
   const fullChange = () => {
     if (changeWidth === 6) {
       dispatch(CHANGE_WEB_STATE());
+      dispatch(WEB_TITLE());
+      dispatch(WEB_ABOUT());
       dispatch(CHANGE_WIDTH());
     } else dispatch(RESET());
   };
@@ -60,24 +68,24 @@ const WebDevHome = () => {
             </Button>
           </Grid>
 
-          <Grid item xs={12} sm={6}>
+          <Grid item xs={changeWidth} sm={6}>
             {changeWebState ? (
               <ProjectOne />
             ) : (
               <Paper className={classes.paper}>Project 1</Paper>
             )}
           </Grid>
-          <Grid item xs={12} sm={6}>
+          <Grid item xs={changeWidth} sm={6}>
             {changeWebState ? (
               <ProjectTwo />
             ) : (
               <Paper className={classes.paper}>Project 2</Paper>
             )}
           </Grid>
-          <Grid item xs={12} sm={6}>
+          <Grid item xs={changeWidth} sm={6}>
             <Paper className={classes.paper}>Project 3</Paper>
           </Grid>
-          <Grid item xs={12} sm={6}>
+          <Grid item xs={changeWidth} sm={6}>
             <Paper className={classes.paper}>Project 4</Paper>
           </Grid>
         </Grid>

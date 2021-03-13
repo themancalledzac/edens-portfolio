@@ -1,28 +1,27 @@
 import { makeStyles, Typography } from "@material-ui/core";
 import React from "react";
 import portrait from "../assets/images/personal_portrait_color.jpg";
+import { useSelector } from "react-redux";
 
 const useStyles = makeStyles((theme) => ({
   portrait: {
-    maxWidth: "75%",
+    maxWidth: "95%",
+    borderRadius: "7px",
+    marginBottom: "20px",
   },
 }));
-export default function AboutMe() {
+const AboutMe = () => {
   const classes = useStyles();
-
+  const headerTitle = useSelector((title) => title.headerTitle);
+  const headerParagraph = useSelector((paragraph) => paragraph.headerParagraph);
   return (
     <>
       <img className={classes.portrait} src={portrait} alt='portrait' />
-      <h1>About me</h1>
-      <Typography paragraph>
-        Full Stack Web Developer with photography, video production, and graphic
-        design experience. Completing a certificate in Full-Stack Web
-        Development with expertise specializing in skills in JavaScript, React,
-        NodeJS, MySQL, and MongoDB. Strengths include creativity, teamwork, and
-        problem-solving to reach feasible results. Excited to leverage knowledge
-        and expertise in a fast-paced team to build a better tomorrow for the
-        web.
-      </Typography>
+      <h3 style={{ marginBottom: "20px" }}>{headerTitle}.</h3>
+      <h3 style={{ marginBottom: "20px" }}>edens.zac@gmail.com</h3>
+      <Typography paragraph> {headerParagraph}</Typography>
     </>
   );
-}
+};
+
+export default AboutMe;

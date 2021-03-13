@@ -18,18 +18,16 @@ import ListItemIcon from "@material-ui/core/ListItemIcon";
 import ListItemText from "@material-ui/core/ListItemText";
 import CameraAltIcon from "@material-ui/icons/CameraAlt";
 import CodeIcon from "@material-ui/icons/Code";
-import InfoIcon from "@material-ui/icons/Info";
-import VideocamIcon from "@material-ui/icons/Videocam";
+import HomeIcon from "@material-ui/icons/Home";
 import EmailIcon from "@material-ui/icons/Email";
 import GitHubIcon from "@material-ui/icons/GitHub";
 import LinkedInIcon from "@material-ui/icons/LinkedIn";
 import InstagramIcon from "@material-ui/icons/Instagram";
 import TwitterIcon from "@material-ui/icons/Twitter";
-import { Route, Switch, Link } from "react-router-dom";
+import { Route, Switch } from "react-router-dom";
 import Home from "./Home";
 import Photography from "./Photography";
 import Coding from "./Coding";
-// import { SwipeableDrawer } from "@material-ui/core";
 import colors from "../components/colors";
 import { useDispatch, useSelector } from "react-redux";
 import {
@@ -37,9 +35,11 @@ import {
   CHANGE_PHOTO_STATE,
   RESET,
   CHANGE_WIDTH,
+  WEB_TITLE,
+  WEB_ABOUT,
+  PHOTO_TITLE,
+  PHOTO_ABOUT,
 } from "../utils/actions";
-
-// import { AccessAlarm, ThreeDRotation } from "@material-ui/icons";
 
 const drawerWidth = 240;
 
@@ -128,6 +128,8 @@ export default function Main() {
   const clickWeb = () => {
     if (changeWebState === false) {
       dispatch(CHANGE_WEB_STATE());
+      dispatch(WEB_TITLE());
+      dispatch(WEB_ABOUT());
       dispatch(CHANGE_WIDTH());
     } else dispatch(RESET());
   };
@@ -135,27 +137,24 @@ export default function Main() {
     if (changePhotoState === false) {
       dispatch(CHANGE_PHOTO_STATE());
       dispatch(CHANGE_WIDTH());
+      dispatch(PHOTO_TITLE());
+      dispatch(PHOTO_ABOUT());
     } else dispatch(RESET());
   };
   const clickAbout = () => {
     dispatch(RESET());
   };
 
-  // const sideBarLink = () => {
-  //   if (key === "About Me")
-  // };
-
   return (
     <div className={classes.root}>
       <CssBaseline />
       <AppBar
         position='fixed'
-        // color="lightBlue"
         className={clsx(classes.appBar, {
           [classes.appBarShift]: open,
         })}
       >
-        <Toolbar>
+        <Toolbar style={{ position: "flex" }}>
           <IconButton
             color='inherit'
             aria-label='open drawer'
@@ -167,9 +166,7 @@ export default function Main() {
           >
             <MenuIcon />
           </IconButton>
-          <Typography variant='h6' noWrap>
-            Zac Edens Portfolio
-          </Typography>
+          <Typography variant='h6'>Zac Edens Portfolio</Typography>
         </Toolbar>
       </AppBar>
       <Drawer
@@ -197,55 +194,59 @@ export default function Main() {
         </div>
         <Divider />
         <List>
-          <Link to={"/"}>
-            <ListItem button key={"About Me"} onClick={() => clickAbout()}>
+          <div to={"/"}>
+            <ListItem button key={"Home"} onClick={() => clickAbout()}>
               <ListItemIcon>
-                <InfoIcon />
+                <HomeIcon />
               </ListItemIcon>
-              <ListItemText primary={"About Me"} />
+              <ListItemText primary={"Home"} />
             </ListItem>
-          </Link>
+          </div>
         </List>
         <Divider />
         <List>
-          <Link to={"/"}>
-            <ListItem button key={"Photography"} onClick={() => clickPhoto()}>
-              <ListItemIcon>
-                <CameraAltIcon />
-              </ListItemIcon>
-              <ListItemText primary={"Photography"} />
-            </ListItem>
-          </Link>
-          <Link to={"/"}>
+          <div>
             <ListItem button key={"Web Dev"} onClick={() => clickWeb()}>
               <ListItemIcon>
                 <CodeIcon />
               </ListItemIcon>
               <ListItemText primary={"Web Dev"} />
             </ListItem>
-          </Link>
+          </div>
+          <div>
+            <ListItem button key={"Photography"} onClick={() => clickPhoto()}>
+              <ListItemIcon>
+                <CameraAltIcon />
+              </ListItemIcon>
+              <ListItemText primary={"Photography"} />
+            </ListItem>
+          </div>
         </List>
         <Divider />
         <List>
-          <ListItem
-            button
-            key={"Email"}
-            onClick={() => {
-              navigator.clipboard.writeText("edens.zac@gmail.com");
-            }}
-          >
+          <ListItem button key={"Email"}>
             <ListItemIcon>
               <EmailIcon />
             </ListItemIcon>
-            <ListItemText primary={"Email"} />
+            <ListItemText primary={"edens.zac@gmail.com"} />
           </ListItem>
-          <ListItem button key={"Github"}>
+          <ListItem
+            button
+            key={"Github"}
+            component='a'
+            href='https://github.com/themancalledzac'
+          >
             <ListItemIcon>
               <GitHubIcon />
             </ListItemIcon>
             <ListItemText primary={"Github"} />
           </ListItem>
-          <ListItem button key={"LinkedIn"}>
+          <ListItem
+            button
+            key={"LinkedIn"}
+            component='a'
+            href='https://linkedin.com/in/zacedens'
+          >
             <ListItemIcon>
               <LinkedInIcon />
             </ListItemIcon>
@@ -254,13 +255,23 @@ export default function Main() {
         </List>
         <Divider />
         <List>
-          <ListItem button key={"Instagram"}>
+          <ListItem
+            button
+            key={"Instagram"}
+            component='a'
+            href='https://www.instagram.com/themancalledzac/'
+          >
             <ListItemIcon>
               <InstagramIcon />
             </ListItemIcon>
             <ListItemText primary={"Instagram"} />
           </ListItem>
-          <ListItem button key={"Twitter"}>
+          <ListItem
+            button
+            key={"Twitter"}
+            component='a'
+            href='https://twitter.com/themancalledzac/'
+          >
             <ListItemIcon>
               <TwitterIcon />
             </ListItemIcon>

@@ -4,7 +4,13 @@ import React from "react";
 // import { useStoreContext } from "../utils/GlobalState";
 import colors from "./colors";
 import { useSelector, useDispatch } from "react-redux";
-import { CHANGE_PHOTO_STATE, CHANGE_WIDTH, RESET } from "../utils/actions";
+import {
+  CHANGE_PHOTO_STATE,
+  CHANGE_WIDTH,
+  PHOTO_ABOUT,
+  PHOTO_TITLE,
+  RESET,
+} from "../utils/actions";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -34,6 +40,8 @@ const PhotoHome = () => {
     if (changeWidth === 6) {
       dispatch(CHANGE_PHOTO_STATE());
       dispatch(CHANGE_WIDTH());
+      dispatch(PHOTO_TITLE());
+      dispatch(PHOTO_ABOUT());
     } else dispatch(RESET());
   };
 
@@ -51,16 +59,16 @@ const PhotoHome = () => {
             </Button>
           </Grid>
 
-          <Grid item xs={12} sm={6}>
+          <Grid item xs={changeWidth} sm={6}>
             <Paper className={classes.paper}>Corporate</Paper>
           </Grid>
-          <Grid item xs={12} sm={6}>
+          <Grid item xs={changeWidth} sm={6}>
             <Paper className={classes.paper}>Portrait</Paper>
           </Grid>
-          <Grid item xs={12} sm={6}>
+          <Grid item xs={changeWidth} sm={6}>
             <Paper className={classes.paper}>Street</Paper>
           </Grid>
-          <Grid item xs={12} sm={6}>
+          <Grid item xs={changeWidth} sm={6}>
             <Paper className={classes.paper}>Landscape</Paper>
           </Grid>
         </Grid>
