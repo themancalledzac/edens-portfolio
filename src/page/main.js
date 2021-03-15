@@ -24,12 +24,14 @@ import GitHubIcon from "@material-ui/icons/GitHub";
 import LinkedInIcon from "@material-ui/icons/LinkedIn";
 import InstagramIcon from "@material-ui/icons/Instagram";
 import TwitterIcon from "@material-ui/icons/Twitter";
+import FileCopyIcon from "@material-ui/icons/FileCopy";
 import { Route, Switch } from "react-router-dom";
 import Home from "./Home";
 import Photography from "./Photography";
 import Coding from "./Coding";
 import colors from "../components/colors";
 import { useDispatch, useSelector } from "react-redux";
+import resume from "../assets/Edens_Resume.pdf";
 import {
   CHANGE_WEB_STATE,
   CHANGE_PHOTO_STATE,
@@ -154,7 +156,7 @@ export default function Main() {
           [classes.appBarShift]: open,
         })}
       >
-        <Toolbar style={{ position: "flex" }}>
+        <Toolbar style={{ justifyContent: "space-between" }}>
           <IconButton
             color='inherit'
             aria-label='open drawer'
@@ -166,7 +168,9 @@ export default function Main() {
           >
             <MenuIcon />
           </IconButton>
-          <Typography variant='h6'>Zac Edens Portfolio</Typography>
+          <Typography variant='h6' noWrap style={{ marginRight: "2rem" }}>
+            Zac Edens Portfolio
+          </Typography>
         </Toolbar>
       </AppBar>
       <Drawer
@@ -202,6 +206,20 @@ export default function Main() {
               <ListItemText primary={"Home"} />
             </ListItem>
           </div>
+          <div>
+            <ListItem
+              button
+              key={"Resume"}
+              component='a'
+              href={resume}
+              target='_blank'
+            >
+              <ListItemIcon>
+                <FileCopyIcon />
+              </ListItemIcon>
+              <ListItemText primary={"Resume Link"} />
+            </ListItem>
+          </div>
         </List>
         <Divider />
         <List>
@@ -224,17 +242,27 @@ export default function Main() {
         </List>
         <Divider />
         <List>
-          <ListItem button key={"Email"}>
+          <ListItem
+            button
+            key={"Email"}
+            onClick={() =>
+              window.open(
+                "https://mail.google.com/mail/?view=cm&fs=1&to=edens.zac@gmail.com",
+                "_blank"
+              )
+            }
+          >
             <ListItemIcon>
               <EmailIcon />
             </ListItemIcon>
-            <ListItemText primary={"edens.zac@gmail.com"} />
+            <ListItemText primary={"Email"} />
           </ListItem>
           <ListItem
             button
             key={"Github"}
-            component='a'
-            href='https://github.com/themancalledzac'
+            onClick={() =>
+              window.open("https://github.com/themancalledzac", "_blank")
+            }
           >
             <ListItemIcon>
               <GitHubIcon />
@@ -244,8 +272,9 @@ export default function Main() {
           <ListItem
             button
             key={"LinkedIn"}
-            component='a'
-            href='https://linkedin.com/in/zacedens'
+            onClick={() =>
+              window.open("https://linkedin.com/in/zacedens", "_blank")
+            }
           >
             <ListItemIcon>
               <LinkedInIcon />
@@ -258,8 +287,12 @@ export default function Main() {
           <ListItem
             button
             key={"Instagram"}
-            component='a'
-            href='https://www.instagram.com/themancalledzac/'
+            onClick={() =>
+              window.open(
+                "https://www.instagram.com/themancalledzac/",
+                "_blank"
+              )
+            }
           >
             <ListItemIcon>
               <InstagramIcon />
@@ -269,8 +302,9 @@ export default function Main() {
           <ListItem
             button
             key={"Twitter"}
-            component='a'
-            href='https://twitter.com/themancalledzac/'
+            onClick={() =>
+              window.open("https://twitter.com/themancalledzac/", "_blank")
+            }
           >
             <ListItemIcon>
               <TwitterIcon />

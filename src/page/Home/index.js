@@ -3,7 +3,7 @@ import React from "react";
 import colors from "../../components/colors";
 import AboutMe from "../../components/AboutMe";
 import PhotoHome from "../../components/PhotoHome";
-import WebDevHome from "../../components/WebDevHome";
+import WebDevHome from "../../components/WebDevHome/WebDevHome";
 import { useSelector } from "react-redux";
 
 const useStyles = makeStyles((theme) => ({
