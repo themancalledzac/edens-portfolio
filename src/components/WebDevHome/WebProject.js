@@ -1,10 +1,10 @@
 import { Button, Container, makeStyles } from "@material-ui/core";
 import React from "react";
 import colors from "../colors";
-import webProjectCard from "../../utils/webProjectCard.json";
+
 // import studentImage from "../../assets/images/StudentManagement-01.jpg";
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(() => ({
   header: {
     height: "3rem",
     width: "100%",

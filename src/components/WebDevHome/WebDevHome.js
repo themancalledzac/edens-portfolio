@@ -1,8 +1,6 @@
 import { Button, Grid, makeStyles, Paper } from "@material-ui/core";
 import React from "react";
 import colors from "../colors";
-// import { useStoreContext } from "../utils/GlobalState";
-// import { HOME_WEB_FULL } from "../utils/actions";
 import { useSelector, useDispatch } from "react-redux";
 import {
   CHANGE_WEB_STATE,
@@ -17,8 +15,6 @@ import studentImage1 from "../../assets/images/StudentManagement-01.jpg";
 import studentImage2 from "../../assets/images/StudentManagement-02.jpg";
 import employeeImage1 from "../../assets/images/EmployeeDir-02.jpg";
 import employeeImage2 from "../../assets/images/EmployeeDir-01.jpg";
-
-// const [state, dispatch] = useStoreContext();
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -35,10 +31,6 @@ const useStyles = makeStyles((theme) => ({
     color: theme.palette.text.primary,
     backgroundColor: colors.primary,
   },
-  // content: {
-  //     if ({state.home.web})
-  //     home.web || home.home || home.photo
-  // },
 }));
 
 const WebDevHome = () => {
@@ -61,7 +53,7 @@ const WebDevHome = () => {
     <Grid item xs={12} sm={changeWidth}>
       <div className={classes.root}>
         <Grid container spacing={3}>
-          <Grid item xs={12} s>
+          <Grid item xs={12}>
             <Button
               style={{ width: "100%" }}
               className={(classes.paper, classes.header)}
