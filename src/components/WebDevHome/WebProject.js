@@ -18,8 +18,6 @@ const useStyles = makeStyles(() => ({
 }));
 
 const WebProject = (props) => {
-  console.log(props);
-  console.log(props.image);
   const classes = useStyles();
   return (
     <>
