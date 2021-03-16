@@ -1,70 +1,107 @@
-# Getting Started with Create React App
+<h1 align="center">Employee Tracker</h1>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<p align="center">
+    <img src="https://img.shields.io/github/repo-size/themancalledzac/edens-portfolio" />
+    <img src="https://img.shields.io/github/languages/top/themancalledzac/edens-portfolio"  />
+    <img src="https://img.shields.io/github/issues/themancalledzac/edens-portfolio" />
+    <img src="https://img.shields.io/github/last-commit/themancalledzac/edens-portfolio" >
+    <a href="https://github.com/themancalledzac">
+        <img alt="Github: themancalledzac" src="https://img.shields.io/github/followers/themancalledzac?style=social" target="_blank" />
+    </a>
+    <a href="https://twitter.com/themancalledzac">
+        <img alt="Twitter: themancalledzac" src="https://img.shields.io/twitter/follow/themancalledzac.svg?style=social" target="_blank" />
+    </a>
+</p>
+  
+<p align="center">
+    <img src="https://img.shields.io/badge/Javascript-yellow" />
+    <img src="https://img.shields.io/badge/React-blue"  />
+    <img src="https://img.shields.io/badge/-Material UI-green" />
+    <img src="https://img.shields.io/badge/-Redux-red" >
+</p>
 
-## Available Scripts
+## Table of Contents
 
-In the project directory, you can run:
+- [Links](#links)
+- [Description](#description)
+- [User Story](#user-story)
+- [Acceptance Criteria](#acceptance-criteria)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Code](#code)
+- [Questions](#questions)
 
-### `npm start`
+## Links
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- [Live Link](https://www.zacedens.com/)
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+- [Github Repo](https://github.com/themancalledzac/edens-portfolio)
 
-### `npm test`
+## Description
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+For this class assignment, we created an employee directory with React. This assignment required that we break up our application's UI into components, manage component state, and respond to user events.
 
-### `npm run build`
+## User Story
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```
+- As a user, I want to be able to view my entire employee directory at once so that I have quick access to their information.
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Acceptance Criteria
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```
+Given a table of random users generated from the [Random User API](https://randomuser.me/), when the user loads the page, a table of employees should render.
 
-### `npm run eject`
+The user should be able to:
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+- Sort the table by at least one category
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- Filter the users by at least one property.
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## Installation
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+```
+'npm init -y' to install our package.json file.
 
-## Learn More
+'npm i' to install all necessary packages to run our application.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Code
 
-### Code Splitting
+```
+app.js file
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+![app.js file](./images/app.PNG)
 
-### Analyzing the Bundle Size
+```
+employees.js file
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+![employees.js file](./images/employees.PNG)
 
-### Making a Progressive Web App
+```
+employeeCard.js file
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+![employeeCard.js file](./images/employeeCard.PNG)
 
-### Advanced Configuration
+```
+filter.js file
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+![filter.js file](./images/filter.PNG)
 
-### Deployment
+## Questions
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+Feel free to contact me with any questions.
 
-### `npm run build` fails to minify
+[Email](mailto:themancalledzac@gmail.com)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+[Github](https://github.com/themancalledzac)
+
+[Twitter](https://twitter.com/themancalledzac)
+
+[Instagram](https://www.instagram.com/themancalledzac/)
