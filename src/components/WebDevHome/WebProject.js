@@ -19,6 +19,7 @@ const useStyles = makeStyles(() => ({
 
 const WebProject = (props) => {
   const classes = useStyles();
+  console.log(props);
   return (
     <>
       <Container>
@@ -32,21 +33,15 @@ const WebProject = (props) => {
         <br></br>
         <h3>Technologies used</h3>
         <br></br>
+        <img
+          className={classes.image}
+          src={props.image01.src}
+          alt={props.image01.title}
+          onClick={() => window.open(`${props.link}`, "_blank")}
+        />
+        <br></br>
+        <br></br>
         <p style={{ textDecoration: "underline" }}>{props.technology}</p>
-        <img
-          className={classes.image}
-          src={props.image1}
-          alt='Student Management'
-          onClick={() => window.open(`${props.link}`, "_blank")}
-        />
-        <br></br>
-        <br></br>
-        <img
-          className={classes.image}
-          src={props.image2}
-          alt='Student Management'
-          onClick={() => window.open(`${props.link}`, "_blank")}
-        />
       </Container>
     </>
   );
