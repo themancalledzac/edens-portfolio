@@ -2,6 +2,7 @@ import { Button, Grid, makeStyles, Paper } from "@material-ui/core";
 import React from "react";
 import colors from "../colors";
 import { useSelector, useDispatch } from "react-redux";
+
 import {
   CHANGE_WEB_STATE,
   CHANGE_WIDTH,
@@ -10,11 +11,8 @@ import {
   WEB_ABOUT,
 } from "../../utils/actions";
 import WebProject from "./WebProject";
-import webProjects from "../../utils/webProjectCard.json";
-import studentImage1 from "../../assets/images/StudentManagement-01.jpg";
-import studentImage2 from "../../assets/images/StudentManagement-02.jpg";
-import employeeImage1 from "../../assets/images/EmployeeDir-02.jpg";
-import employeeImage2 from "../../assets/images/EmployeeDir-01.jpg";
+// import webProjects from "../../utils/webProjectCard";
+import WebProjectCard from "../../utils/webProjectCard";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -63,59 +61,25 @@ const WebDevHome = () => {
               Web Development
             </Button>
           </Grid>
-
-          <Grid item xs={changeWidth} sm={6}>
-            {changeWebState ? (
-              <WebProject
-                title={webProjects.Project1.title}
-                link={webProjects.Project1.link}
-                image1={studentImage1}
-                image2={studentImage2}
-                paragraph={webProjects.Project1.paragraph}
-                technology={webProjects.Project1.technology}
-              />
-            ) : (
-              <Paper className={classes.paper}>Project 1</Paper>
-            )}
-          </Grid>
-          <Grid item xs={changeWidth} sm={6}>
-            {changeWebState ? (
-              <WebProject
-                title={webProjects.Project2.title}
-                link={webProjects.Project2.link}
-                image1={employeeImage1}
-                image2={employeeImage2}
-                paragraph={webProjects.Project2.paragraph}
-                technology={webProjects.Project2.technology}
-              />
-            ) : (
-              <Paper className={classes.paper}>Project 2</Paper>
-            )}
-          </Grid>
-          <Grid item xs={changeWidth} sm={6}>
-            {changeWebState ? (
-              <WebProject
-                title={webProjects.Project3.title}
-                link={webProjects.Project3.link}
-                paragraph={webProjects.Project3.paragraph}
-                technology={webProjects.Project3.technology}
-              />
-            ) : (
-              <Paper className={classes.paper}>Project 3</Paper>
-            )}
-          </Grid>
-          <Grid item xs={changeWidth} sm={6}>
-            {changeWebState ? (
-              <WebProject
-                title={webProjects.Project4.title}
-                link={webProjects.Project4.link}
-                paragraph={webProjects.Project4.paragraph}
-                technology={webProjects.Project4.technology}
-              />
-            ) : (
-              <Paper className={classes.paper}>Project 4</Paper>
-            )}
-          </Grid>
+          {WebProjectCard.map(
+            ({ title, link, image01, image02, paragraph, technology }) => (
+              <Grid item xs={changeWidth} sm={6}>
+                {changeWebState ? (
+                  <WebProject
+                    key={title}
+                    title={title}
+                    link={link}
+                    image01={image01}
+                    image2={image02}
+                    paragraph={paragraph}
+                    technology={technology}
+                  />
+                ) : (
+                  <Paper className={classes.paper}>{title}</Paper>
+                )}
+              </Grid>
+            )
+          )}
         </Grid>
       </div>
     </Grid>
