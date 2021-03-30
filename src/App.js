@@ -1,11 +1,11 @@
 import { BrowserRouter as Router } from "react-router-dom";
-import Main from "./page/main";
+import NavBar from "./page/NavBar";
 // import { StoreProvider } from "./utils/GlobalState";
 
 function App() {
   return (
     <Router>
-      <Main />
+      <NavBar />
     </Router>
   );
 }

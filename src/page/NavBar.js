@@ -26,7 +26,7 @@ import InstagramIcon from "@material-ui/icons/Instagram";
 import TwitterIcon from "@material-ui/icons/Twitter";
 import FileCopyIcon from "@material-ui/icons/FileCopy";
 import { Route, Switch } from "react-router-dom";
-import Home from "./Home";
+import AboutHeader from "./AboutHeader";
 import Photography from "./Photography";
 import Coding from "./Coding";
 import colors from "../components/colors";
@@ -80,13 +80,14 @@ const useStyles = makeStyles((theme) => ({
   },
   drawerOpen: {
     width: drawerWidth,
-    backgroundColor: colors.paleOrange,
+    backgroundColor: colors.orange,
     transition: theme.transitions.create("width", {
       easing: theme.transitions.easing.sharp,
       duration: theme.transitions.duration.enteringScreen,
     }),
   },
   drawerClose: {
+    backgroundColor: colors.orange,
     transition: theme.transitions.create("width", {
       easing: theme.transitions.easing.sharp,
       duration: theme.transitions.duration.leavingScreen,
@@ -94,7 +95,7 @@ const useStyles = makeStyles((theme) => ({
     overflowX: "hidden",
     width: theme.spacing(7) + 1,
     [theme.breakpoints.up("sm")]: {
-      width: theme.spacing(9) + 1,
+      width: theme.spacing(8) + 1,
     },
   },
   toolbar: {
@@ -112,7 +113,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 // export -------------------------------------------------
-export default function Main() {
+export default function NavBar() {
   const classes = useStyles();
   const theme = useTheme();
   const [open, setOpen] = React.useState(false);
@@ -199,11 +200,11 @@ export default function Main() {
         <Divider />
         <List>
           <div to={"/"}>
-            <ListItem button key={"Home"} onClick={() => clickAbout()}>
+            <ListItem button key={"About Me"} onClick={() => clickAbout()}>
               <ListItemIcon>
                 <HomeIcon />
               </ListItemIcon>
-              <ListItemText primary={"Home"} />
+              <ListItemText primary={"About Me"} />
             </ListItem>
           </div>
           <div>
@@ -318,7 +319,7 @@ export default function Main() {
         <div className={classes.toolbar} />
 
         <Switch>
-          <Route exact path='/' component={Home} />
+          <Route exact path='/' component={AboutHeader} />
           <Route exact path='/photography' component={Photography} />
           <Route exact path='/coding' component={Coding} />
         </Switch>

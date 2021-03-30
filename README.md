@@ -24,7 +24,6 @@
 
 - [Links](#links)
 - [Description](#description)
-- [User Story](#user-story)
 - [Acceptance Criteria](#acceptance-criteria)
 - [Installation](#installation)
 - [Usage](#usage)
@@ -39,60 +38,21 @@
 
 ## Description
 
-For this class assignment, we created an employee directory with React. This assignment required that we break up our application's UI into components, manage component state, and respond to user events.
+Updated portfolio, including a Resume link, 4 of my most prominent projects, links to all social media, including Github and LinkedIn.  This portfolio utilizes React and Redux, moving into a single page application with multi-page functionality. 
 
-## User Story
-
-```
-- As a user, I want to be able to view my entire employee directory at once so that I have quick access to their information.
-```
 
 ## Acceptance Criteria
 
 ```
-Given a table of random users generated from the [Random User API](https://randomuser.me/), when the user loads the page, a table of employees should render.
+Use React
 
-The user should be able to:
+A Header component that appears on multiple pages
 
-- Sort the table by at least one category
+A single Project component that will be used multiple times on a single page
 
-- Filter the users by at least one property.
-```
-
-## Installation
+Navigation and dynamic rendering
 
 ```
-'npm init -y' to install our package.json file.
-
-'npm i' to install all necessary packages to run our application.
-
-```
-
-## Code
-
-```
-app.js file
-```
-
-![app.js file](./images/app.PNG)
-
-```
-employees.js file
-```
-
-![employees.js file](./images/employees.PNG)
-
-```
-employeeCard.js file
-```
-
-![employeeCard.js file](./images/employeeCard.PNG)
-
-```
-filter.js file
-```
-
-![filter.js file](./images/filter.PNG)
 
 ## Questions
 
