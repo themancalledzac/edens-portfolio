@@ -128,7 +128,7 @@ export default function NavBar() {
   };
   const dispatch = useDispatch();
   const clickWeb = () => {
-    if (changeWebState === false) {
+    if (changeWebState === false && changePhotoState === false) {
       dispatch(CHANGE_WEB_STATE());
       dispatch(WEB_TITLE());
       dispatch(WEB_ABOUT());
@@ -136,7 +136,7 @@ export default function NavBar() {
     } else dispatch(RESET());
   };
   const clickPhoto = () => {
-    if (changePhotoState === false) {
+    if (changePhotoState === false && changeWebState === false) {
       dispatch(CHANGE_PHOTO_STATE());
       dispatch(CHANGE_WIDTH());
       dispatch(PHOTO_TITLE());
