@@ -26,9 +26,8 @@ import InstagramIcon from "@material-ui/icons/Instagram";
 import TwitterIcon from "@material-ui/icons/Twitter";
 import FileCopyIcon from "@material-ui/icons/FileCopy";
 import { Route, Switch } from "react-router-dom";
-import AboutHeader from "./AboutHeader";
-import Photography from "./Photography";
-import Coding from "./Coding";
+import Home from "./Home";
+
 import colors from "../components/colors";
 import { useDispatch, useSelector } from "react-redux";
 import resume from "../assets/Edens_Resume.pdf";
@@ -319,9 +318,7 @@ export default function NavBar() {
         <div className={classes.toolbar} />
 
         <Switch>
-          <Route exact path='/' component={AboutHeader} />
-          <Route exact path='/photography' component={Photography} />
-          <Route exact path='/coding' component={Coding} />
+          <Route exact path='/' component={Home} />
         </Switch>
       </main>
     </div>

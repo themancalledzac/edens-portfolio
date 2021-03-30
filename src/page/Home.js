@@ -23,7 +23,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const AboutHeader = () => {
+const Home = () => {
   const classes = useStyles();
   const changeWebState = useSelector((state) => state.changeWebState);
   const changePhotoState = useSelector((state) => state.changePhotoState);
@@ -42,4 +42,4 @@ const AboutHeader = () => {
   );
 };
 
-export default AboutHeader;
+export default Home;

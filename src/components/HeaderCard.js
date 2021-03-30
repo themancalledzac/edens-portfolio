@@ -6,7 +6,7 @@ import { useSelector } from "react-redux";
 
 const useStyles = makeStyles((theme) => ({
   portrait: {
-    maxWidth: "95%",
+    maxWidth: "100%",
     borderRadius: "7px",
     marginBottom: "20px",
   },
@@ -24,19 +24,15 @@ const HeaderCard = (props) => {
   //   console.log(headerImage.src);
   //   console.log(headerImage.title);
   return (
-    <Grid item xs={12}>
-      <div className={classes.root}>
-        <Grid container spacing={3}>
-          <Grid item xs={12} sm={6}>
-            <img className={classes.portrait} src={portrait} alt='portrait' />
-          </Grid>
-          <Grid item xs={12} sm={6}>
-            <h3 style={{ marginBottom: "20px" }}>{headerTitle}.</h3>
-            <h3 style={{ marginBottom: "20px" }}>edens.zac@gmail.com</h3>
-            <Typography paragraph> {headerParagraph}</Typography>
-          </Grid>
-        </Grid>
-      </div>
+    <Grid container spacing={3}>
+      <Grid item xs={12} sm={6}>
+        <img className={classes.portrait} src={portrait} alt='portrait' />
+      </Grid>
+      <Grid item xs={12} sm={6}>
+        <h3 style={{ marginBottom: "20px" }}>{headerTitle}.</h3>
+        <h3 style={{ marginBottom: "20px" }}>edens.zac@gmail.com</h3>
+        <Typography paragraph> {headerParagraph}</Typography>
+      </Grid>
     </Grid>
   );
 };
