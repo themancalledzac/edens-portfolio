@@ -52,6 +52,7 @@ const useStyles = makeStyles((theme) => ({
   appBar: {
     zIndex: theme.zIndex.drawer + 1,
     backgroundColor: colors.orange,
+    color: colors.white,
 
     transition: theme.transitions.create(["width", "margin"], {
       easing: theme.transitions.easing.sharp,
@@ -76,10 +77,12 @@ const useStyles = makeStyles((theme) => ({
     width: drawerWidth,
     flexShrink: 0,
     whiteSpace: "nowrap",
+    color: colors.white,
   },
   drawerOpen: {
     width: drawerWidth,
     backgroundColor: colors.orange,
+    color: colors.white,
     transition: theme.transitions.create("width", {
       easing: theme.transitions.easing.sharp,
       duration: theme.transitions.duration.enteringScreen,
@@ -108,6 +111,10 @@ const useStyles = makeStyles((theme) => ({
   content: {
     flexGrow: 1,
     padding: theme.spacing(3),
+  },
+  logo: {
+    color: "white",
+    textShadow: "0.5px 0.5px 1px #9e9e9e",
   },
 }));
 
@@ -166,7 +173,7 @@ export default function NavBar() {
               [classes.hide]: open,
             })}
           >
-            <MenuIcon />
+            <MenuIcon color='inherit' />
           </IconButton>
           <Typography variant='h6' noWrap style={{ marginRight: "2rem" }}>
             Zac Edens Portfolio
@@ -192,7 +199,7 @@ export default function NavBar() {
             {theme.direction === "rtl" ? (
               <ChevronRightIcon />
             ) : (
-              <ChevronLeftIcon />
+              <ChevronLeftIcon className={classes.logo} />
             )}
           </IconButton>
         </div>
@@ -201,9 +208,9 @@ export default function NavBar() {
           <div to={"/"}>
             <ListItem button key={"About Me"} onClick={() => clickAbout()}>
               <ListItemIcon>
-                <HomeIcon />
+                <HomeIcon className={classes.logo} />
               </ListItemIcon>
-              <ListItemText primary={"About Me"} />
+              <ListItemText className={classes.logo} primary={"About Me"} />
             </ListItem>
           </div>
           <div>
@@ -215,9 +222,9 @@ export default function NavBar() {
               target='_blank'
             >
               <ListItemIcon>
-                <FileCopyIcon />
+                <FileCopyIcon className={classes.logo} />
               </ListItemIcon>
-              <ListItemText primary={"Resume Link"} />
+              <ListItemText className={classes.logo} primary={"Resume Link"} />
             </ListItem>
           </div>
         </List>
@@ -226,17 +233,17 @@ export default function NavBar() {
           <div>
             <ListItem button key={"Web Dev"} onClick={() => clickWeb()}>
               <ListItemIcon>
-                <CodeIcon />
+                <CodeIcon className={classes.logo} />
               </ListItemIcon>
-              <ListItemText primary={"Web Dev"} />
+              <ListItemText className={classes.logo} primary={"Web Dev"} />
             </ListItem>
           </div>
           <div>
             <ListItem button key={"Photography"} onClick={() => clickPhoto()}>
               <ListItemIcon>
-                <CameraAltIcon />
+                <CameraAltIcon className={classes.logo} />
               </ListItemIcon>
-              <ListItemText primary={"Photography"} />
+              <ListItemText className={classes.logo} primary={"Photography"} />
             </ListItem>
           </div>
         </List>
@@ -253,9 +260,9 @@ export default function NavBar() {
             }
           >
             <ListItemIcon>
-              <EmailIcon />
+              <EmailIcon className={classes.logo} />
             </ListItemIcon>
-            <ListItemText primary={"Email"} />
+            <ListItemText className={classes.logo} primary={"Email"} />
           </ListItem>
           <ListItem
             button
@@ -265,9 +272,9 @@ export default function NavBar() {
             }
           >
             <ListItemIcon>
-              <GitHubIcon />
+              <GitHubIcon className={classes.logo} />
             </ListItemIcon>
-            <ListItemText primary={"Github"} />
+            <ListItemText className={classes.logo} primary={"Github"} />
           </ListItem>
           <ListItem
             button
@@ -277,9 +284,9 @@ export default function NavBar() {
             }
           >
             <ListItemIcon>
-              <LinkedInIcon />
+              <LinkedInIcon className={classes.logo} />
             </ListItemIcon>
-            <ListItemText primary={"LinkedIn"} />
+            <ListItemText className={classes.logo} primary={"LinkedIn"} />
           </ListItem>
         </List>
         <Divider />
@@ -295,9 +302,9 @@ export default function NavBar() {
             }
           >
             <ListItemIcon>
-              <InstagramIcon />
+              <InstagramIcon className={classes.logo} />
             </ListItemIcon>
-            <ListItemText primary={"Instagram"} />
+            <ListItemText className={classes.logo} primary={"Instagram"} />
           </ListItem>
           <ListItem
             button
@@ -307,9 +314,9 @@ export default function NavBar() {
             }
           >
             <ListItemIcon>
-              <TwitterIcon />
+              <TwitterIcon className={classes.logo} />
             </ListItemIcon>
-            <ListItemText primary={"Twitter"} />
+            <ListItemText className={classes.logo} primary={"Twitter"} />
           </ListItem>
         </List>
         <Divider />

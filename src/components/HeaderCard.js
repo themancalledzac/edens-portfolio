@@ -14,19 +14,19 @@ const useStyles = makeStyles((theme) => ({
     flexGrow: 1,
   },
 }));
-const HeaderCard = (props) => {
+const HeaderCard = () => {
   const classes = useStyles();
   const headerTitle = useSelector((title) => title.headerTitle);
   const headerParagraph = useSelector((paragraph) => paragraph.headerParagraph);
   // future development
-  const headerImage = images[props.id];
+  const headerImage = useSelector((image) => image.headerImage);
   //   console.log(portrait);
   //   console.log(headerImage.src);
   //   console.log(headerImage.title);
   return (
     <Grid container spacing={3}>
       <Grid item xs={12} sm={6}>
-        <img className={classes.portrait} src={portrait} alt='portrait' />
+        <img className={classes.portrait} src={headerImage} alt='portrait' />
       </Grid>
       <Grid item xs={12} sm={6}>
         <h3 style={{ marginBottom: "20px" }}>{headerTitle}.</h3>

@@ -31,7 +31,7 @@ const Home = () => {
   return (
     <div className={classes.root}>
       <Container maxWidth='md'>
-        <HeaderCard id={0} />
+        <HeaderCard />
         {/*<AboutMe /> */}
         <Grid container spacing={3}>
           {changePhotoState ? "" : <WebDevHome />}
