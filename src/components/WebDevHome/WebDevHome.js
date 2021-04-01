@@ -12,7 +12,7 @@ import {
 } from "../../utils/actions";
 import WebProject from "./WebProject";
 // import webProjects from "../../utils/webProjectCard";
-import WebProjectCard from "../../utils/webProjectCard";
+import WebData from "../../utils/webData";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -61,14 +61,23 @@ const WebDevHome = () => {
               Web Development
             </Button>
           </Grid>
-          {WebProjectCard.map(
-            ({ title, link, image01, image02, paragraph, technology }) => (
+          {WebData.map(
+            ({
+              title,
+              link,
+              gitHubLink,
+              image01,
+              image02,
+              paragraph,
+              technology,
+            }) => (
               <Grid item xs={changeWidth} sm={6}>
                 {changeWebState ? (
                   <WebProject
                     key={title}
                     title={title}
                     link={link}
+                    gitHubLink={gitHubLink}
                     image01={image01}
                     image2={image02}
                     paragraph={paragraph}

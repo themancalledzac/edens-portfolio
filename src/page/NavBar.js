@@ -42,7 +42,7 @@ import {
   PHOTO_ABOUT,
 } from "../utils/actions";
 
-const drawerWidth = 240;
+const drawerWidth = 200;
 
 // Use Styles ---------------------------------------------
 const useStyles = makeStyles((theme) => ({
@@ -52,7 +52,6 @@ const useStyles = makeStyles((theme) => ({
   appBar: {
     zIndex: theme.zIndex.drawer + 1,
     backgroundColor: colors.orange,
-    color: colors.white,
 
     transition: theme.transitions.create(["width", "margin"], {
       easing: theme.transitions.easing.sharp,
@@ -77,12 +76,10 @@ const useStyles = makeStyles((theme) => ({
     width: drawerWidth,
     flexShrink: 0,
     whiteSpace: "nowrap",
-    color: colors.white,
   },
   drawerOpen: {
     width: drawerWidth,
     backgroundColor: colors.orange,
-    color: colors.white,
     transition: theme.transitions.create("width", {
       easing: theme.transitions.easing.sharp,
       duration: theme.transitions.duration.enteringScreen,
@@ -113,7 +110,7 @@ const useStyles = makeStyles((theme) => ({
     padding: theme.spacing(3),
   },
   logo: {
-    color: "white",
+    color: colors.white,
     textShadow: "0.5px 0.5px 1px #9e9e9e",
   },
 }));

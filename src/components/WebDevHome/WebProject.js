@@ -29,9 +29,13 @@ const WebProject = (props) => {
         >
           {props.title}
         </Button>
+        <Button onClick={() => window.open(`${props.gitHubLink}`, "_blank")}>
+          Github Link
+        </Button>
         <p>{props.paragraph}</p>
         <br></br>
         <h3>Technologies used</h3>
+        <p style={{ textDecoration: "underline" }}>{props.technology}</p>
         <br></br>
         <img
           className={classes.image}
@@ -41,7 +45,6 @@ const WebProject = (props) => {
         />
         <br></br>
         <br></br>
-        <p style={{ textDecoration: "underline" }}>{props.technology}</p>
       </Container>
     </>
   );
