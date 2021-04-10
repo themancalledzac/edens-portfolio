@@ -1,11 +1,11 @@
-const headerTitle = (title = "About Me", action) => {
+const headerTitle = (title = "About", action) => {
   switch (action.type) {
     case "WEB_TITLE":
-      return (title = "Web Development");
+      return (title = "Dev");
     case "PHOTO_TITLE":
-      return (title = "Photography");
+      return (title = "Photo");
     case "RESET":
-      return (title = "About Me");
+      return (title = "About");
     default:
       return title;
   }

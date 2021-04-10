@@ -43,3 +43,11 @@ const Home = () => {
 };
 
 export default Home;
+
+// TODO
+// Change state so that Web, Photo, and About are three separate pages inside the home Page
+// only one state is true per page, which makes each other state false.  this state is universal
+// about page is a single page, no need to scroll, maybe we can make it full screen size for a few different screen sizes?
+// about page is an about paragraph, and a contact section.
+// email button needs to open a module with the email name
+//
