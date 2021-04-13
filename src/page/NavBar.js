@@ -40,6 +40,7 @@ import {
   WEB_ABOUT,
   PHOTO_TITLE,
   PHOTO_ABOUT,
+  ABOUT_TITLE,
 } from "../utils/actions";
 
 const drawerWidth = 200;
@@ -132,19 +133,36 @@ export default function NavBar() {
   };
   const dispatch = useDispatch();
   const clickWeb = () => {
-    if (changeWebState === false && changePhotoState === false) {
+    if (changePhotoState === false) {
       dispatch(CHANGE_WEB_STATE());
       dispatch(WEB_TITLE());
       dispatch(WEB_ABOUT());
       dispatch(CHANGE_WIDTH());
-    } else dispatch(RESET());
+      return;
+    }
+    if (changePhotoState === true) {
+      dispatch(CHANGE_WEB_STATE());
+      dispatch(CHANGE_PHOTO_STATE());
+      dispatch(WEB_TITLE());
+      dispatch(WEB_ABOUT());
+      return;
+    } else {
+      dispatch(RESET());
+    }
   };
   const clickPhoto = () => {
-    if (changePhotoState === false && changeWebState === false) {
+    if (changeWebState === false) {
       dispatch(CHANGE_PHOTO_STATE());
       dispatch(CHANGE_WIDTH());
       dispatch(PHOTO_TITLE());
       dispatch(PHOTO_ABOUT());
+      return;
+    }
+    if (changeWebState === true) {
+      dispatch(CHANGE_WEB_STATE());
+      dispatch(CHANGE_PHOTO_STATE());
+      dispatch(PHOTO_ABOUT());
+      return;
     } else dispatch(RESET());
   };
   const clickAbout = () => {

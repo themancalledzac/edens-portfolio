@@ -34,8 +34,8 @@ const Home = () => {
         <HeaderCard />
         {/*<AboutMe /> */}
         <Grid container spacing={3}>
-          {changePhotoState ? "" : <WebDevHome />}
-          {changeWebState ? "" : <PhotoHome />}
+          {changePhotoState ? <PhotoHome /> : ""}
+          {changeWebState ? <WebDevHome /> : ""}
         </Grid>
       </Container>
     </div>

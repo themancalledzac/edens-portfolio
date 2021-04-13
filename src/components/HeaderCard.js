@@ -22,7 +22,7 @@ import { ReactComponent as VisualStudioLogo } from "../assets/visualstudio-plain
 const useStyles = makeStyles((theme) => ({
   portrait: {
     maxWidth: "100%",
-    borderRadius: "7px",
+    borderRadius: "20px",
     marginBottom: "20px",
     marginTop: "70px",
     [theme.breakpoints.down("sm")]: {
@@ -33,6 +33,7 @@ const useStyles = makeStyles((theme) => ({
     },
     [theme.breakpoints.down("xs")]: {
       maxWidth: "100%",
+      marginTop: "0px",
     },
   },
   root: {
@@ -58,12 +59,18 @@ const useStyles = makeStyles((theme) => ({
   logoContainer: {
     maxWidth: "85%",
     marginBottom: "30px",
+    [theme.breakpoints.up("md")]: {
+      marginTop: "60px",
+    },
     marginTop: "30px",
   },
   headerParagraph: {
     marginBottom: "30px",
     marginTop: "30px",
     minHeight: "250px",
+    [theme.breakpoints.down("xs")]: {
+      height: "auto",
+    },
   },
   headerTitle: {
     textAlign: "center",
@@ -80,6 +87,10 @@ const useStyles = makeStyles((theme) => ({
   },
   aboutContainer: {
     minHeight: "444px",
+    [theme.breakpoints.down("xs")]: {
+      paddingLeft: "0",
+      paddingRight: "0",
+    },
   },
 }));
 const HeaderCard = () => {

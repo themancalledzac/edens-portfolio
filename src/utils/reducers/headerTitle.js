@@ -4,6 +4,8 @@ const headerTitle = (title = "About", action) => {
       return (title = "Dev");
     case "PHOTO_TITLE":
       return (title = "Photo");
+    case "ABOUT_TITLE":
+      return (title = "About");
     case "RESET":
       return (title = "About");
     default:

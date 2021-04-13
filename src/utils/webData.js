@@ -48,7 +48,7 @@ const WebData = [
     role: "Personal Project.",
     technology: "Javascript, React, Express, MongoDB, Material-UI",
     image01: {
-      src: require("../assets/employeeDirectory.gif").default,
+      src: require("../assets/bookSearch.gif").default,
       title: "Student Management App Image number one.",
     },
   },
