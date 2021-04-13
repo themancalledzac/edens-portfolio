@@ -93,7 +93,7 @@ const useStyles = makeStyles((theme) => ({
     },
   },
 }));
-const HeaderCard = () => {
+const HeaderCard = ({ title, paragraph, image }) => {
   const classes = useStyles();
   const headerTitle = useSelector((title) => title.headerTitle);
   const headerParagraph = useSelector((paragraph) => paragraph.headerParagraph);
@@ -106,38 +106,38 @@ const HeaderCard = () => {
     <>
       <Grid style={{ marginTop: "5rem" }} container spacing={3}>
         <Grid item xs={12} sm={12} md={6}>
-          <img className={classes.portrait} src={headerImage} alt='portrait' />
+          <img className={classes.portrait} src={image} alt='portrait' />
         </Grid>
         <Grid item xs={12} sm={12} md={6}>
           <br></br>
           <Grid container spacing={2}>
             <Grid item xs={12} style={{ paddingBottom: "0px" }}>
               <Typography variant='h4' noWrap className={classes.headerTitle}>
-                {headerTitle}
+                {title}
               </Typography>
               <hr className={classes.underLine}></hr>
             </Grid>
           </Grid>
           <Container className={classes.aboutContainer}>
             <Grid container spacing={2} className={classes.infoContainer}>
-              <Grid style={{ paddingBottom: "0px" }} xs={12} sm={4}>
+              <Grid item style={{ paddingBottom: "0px" }} xs={12} sm={4}>
                 <h4 className={classes.infoTitle}>Email: </h4>
               </Grid>
-              <Grid style={{ paddingBottom: "0px" }} xs={12} sm={8}>
+              <Grid item style={{ paddingBottom: "0px" }} xs={12} sm={8}>
                 <h4 className={classes.info}>edens.zac@gmail.com</h4>
               </Grid>
             </Grid>
             <Grid container spacing={2} className={classes.infoContainer}>
-              <Grid style={{ paddingTop: "0px" }} xs={12} sm={4}>
+              <Grid item style={{ paddingTop: "0px" }} xs={12} sm={4}>
                 <h4 className={classes.infoTitle}>Phone: </h4>
               </Grid>
-              <Grid style={{ paddingTop: "0px" }} xs={12} sm={8}>
+              <Grid item style={{ paddingTop: "0px" }} xs={12} sm={8}>
                 <h4 className={classes.info}>1.503.475.8785</h4>
               </Grid>
             </Grid>
             <hr className={classes.underLine}></hr>
             <Typography paragraph className={classes.headerParagraph}>
-              {headerParagraph}
+              {paragraph}
             </Typography>
             <hr
               className={classes.underLine}

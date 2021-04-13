@@ -5,6 +5,7 @@ import PhotoHome from "../components/PhotoHome";
 import WebDevHome from "../components/WebDevHome/WebDevHome";
 import { useSelector } from "react-redux";
 import HeaderCard from "../components/HeaderCard";
+import aboutData from "../utils/aboutData";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -27,11 +28,38 @@ const Home = () => {
   const classes = useStyles();
   const changeWebState = useSelector((state) => state.changeWebState);
   const changePhotoState = useSelector((state) => state.changePhotoState);
+  const changeAboutState = useSelector((state) => state.changeAboutState);
 
   return (
     <div className={classes.root}>
       <Container maxWidth='md'>
-        <HeaderCard />
+        {changeAboutState ? (
+          <HeaderCard
+            title={aboutData[0].title}
+            paragraph={aboutData[0].paragraph}
+            image={aboutData[0].image}
+          />
+        ) : (
+          ""
+        )}
+        {changeWebState ? (
+          <HeaderCard
+            title={aboutData[1].title}
+            paragraph={aboutData[1].paragraph}
+            image={aboutData[1].image}
+          />
+        ) : (
+          ""
+        )}
+        {changePhotoState ? (
+          <HeaderCard
+            title={aboutData[2].title}
+            paragraph={aboutData[2].paragraph}
+            image={aboutData[2].image}
+          />
+        ) : (
+          ""
+        )}
         {/*<AboutMe /> */}
         <Grid container spacing={3}>
           {changePhotoState ? <PhotoHome /> : ""}
