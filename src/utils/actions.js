@@ -11,7 +11,7 @@ export const CHANGE_WEB_STATE = () => {
 };
 export const CHANGE_PHOTO_STATE = () => {
   return {
-    type: "PHOTO_PHOTO_STATE",
+    type: "CHANGE_PHOTO_STATE",
   };
 };
 
@@ -48,6 +48,11 @@ export const WEB_TITLE = () => {
 export const ABOUT_TITLE = () => {
   return {
     type: "ABOUT_TITLE",
+  };
+};
+export const ABOUT_STATE = () => {
+  return {
+    type: "ABOUT_STATE",
   };
 };
 export const RESET = () => {

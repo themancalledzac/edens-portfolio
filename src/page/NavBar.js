@@ -35,12 +35,7 @@ import {
   CHANGE_WEB_STATE,
   CHANGE_PHOTO_STATE,
   RESET,
-  CHANGE_WIDTH,
-  WEB_TITLE,
-  WEB_ABOUT,
-  PHOTO_TITLE,
-  PHOTO_ABOUT,
-  ABOUT_TITLE,
+  ABOUT_STATE,
 } from "../utils/actions";
 
 const drawerWidth = 200;
@@ -132,38 +127,35 @@ export default function NavBar() {
     setOpen(false);
   };
   const dispatch = useDispatch();
+
   const clickWeb = () => {
     if (changePhotoState === false) {
-      dispatch(CHANGE_WEB_STATE());
-      dispatch(WEB_TITLE());
-      dispatch(WEB_ABOUT());
-      dispatch(CHANGE_WIDTH());
+      dispatch(CHANGE_WEB_STATE(true));
+      dispatch(ABOUT_STATE(false));
       return;
     }
     if (changePhotoState === true) {
-      dispatch(CHANGE_WEB_STATE());
-      dispatch(CHANGE_PHOTO_STATE());
-      dispatch(WEB_TITLE());
-      dispatch(WEB_ABOUT());
+      dispatch(CHANGE_PHOTO_STATE(false));
+      dispatch(CHANGE_WEB_STATE(true));
       return;
+      // } if (changeWebState === true)
     } else {
       dispatch(RESET());
     }
   };
   const clickPhoto = () => {
     if (changeWebState === false) {
-      dispatch(CHANGE_PHOTO_STATE());
-      dispatch(CHANGE_WIDTH());
-      dispatch(PHOTO_TITLE());
-      dispatch(PHOTO_ABOUT());
+      dispatch(CHANGE_PHOTO_STATE(true));
+      dispatch(ABOUT_STATE(false));
       return;
     }
     if (changeWebState === true) {
-      dispatch(CHANGE_WEB_STATE());
-      dispatch(CHANGE_PHOTO_STATE());
-      dispatch(PHOTO_ABOUT());
+      dispatch(CHANGE_PHOTO_STATE(true));
+      dispatch(CHANGE_WEB_STATE(false));
       return;
-    } else dispatch(RESET());
+    } else {
+      dispatch(RESET());
+    }
   };
   const clickAbout = () => {
     dispatch(RESET());
