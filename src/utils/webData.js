@@ -42,7 +42,7 @@ const WebData = [
   },
   {
     title: "Book Search",
-    link: "",
+    link: "https://google-book-search-edens.herokuapp.com/",
     gitHubLink: "https://github.com/themancalledzac/book-search-react",
     paragraph: "Our first Mern stack application. Currently in development",
     role: "Personal Project.",
