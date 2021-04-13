@@ -25,6 +25,15 @@ const useStyles = makeStyles((theme) => ({
     borderRadius: "7px",
     marginBottom: "20px",
     marginTop: "70px",
+    [theme.breakpoints.down("sm")]: {
+      marginLeft: "auto",
+      marginRight: "auto",
+      display: "block",
+      maxWidth: "450px",
+    },
+    [theme.breakpoints.down("xs")]: {
+      maxWidth: "100%",
+    },
   },
   root: {
     flexGrow: 1,
@@ -54,6 +63,7 @@ const useStyles = makeStyles((theme) => ({
   headerParagraph: {
     marginBottom: "30px",
     marginTop: "30px",
+    minHeight: "250px",
   },
   headerTitle: {
     textAlign: "center",
@@ -68,6 +78,9 @@ const useStyles = makeStyles((theme) => ({
   underLine: {
     borderTop: "1px solid black",
   },
+  aboutContainer: {
+    minHeight: "444px",
+  },
 }));
 const HeaderCard = () => {
   const classes = useStyles();
@@ -81,40 +94,45 @@ const HeaderCard = () => {
   return (
     <>
       <Grid style={{ marginTop: "5rem" }} container spacing={3}>
-        <Grid item xs={12} sm={6}>
+        <Grid item xs={12} sm={12} md={6}>
           <img className={classes.portrait} src={headerImage} alt='portrait' />
         </Grid>
-        <Grid item xs={12} sm={6}>
+        <Grid item xs={12} sm={12} md={6}>
           <br></br>
           <Grid container spacing={2}>
-            <Grid item xs={12}>
+            <Grid item xs={12} style={{ paddingBottom: "0px" }}>
               <Typography variant='h4' noWrap className={classes.headerTitle}>
                 {headerTitle}
               </Typography>
               <hr className={classes.underLine}></hr>
             </Grid>
           </Grid>
-          <Grid container spacing={2} className={classes.infoContainer}>
-            <Grid style={{ paddingBottom: "0px" }} xs={12} sm={4}>
-              <h4 className={classes.infoTitle}>Email: </h4>
+          <Container className={classes.aboutContainer}>
+            <Grid container spacing={2} className={classes.infoContainer}>
+              <Grid style={{ paddingBottom: "0px" }} xs={12} sm={4}>
+                <h4 className={classes.infoTitle}>Email: </h4>
+              </Grid>
+              <Grid style={{ paddingBottom: "0px" }} xs={12} sm={8}>
+                <h4 className={classes.info}>edens.zac@gmail.com</h4>
+              </Grid>
             </Grid>
-            <Grid style={{ paddingBottom: "0px" }} xs={12} sm={8}>
-              <h4 className={classes.info}>edens.zac@gmail.com</h4>
+            <Grid container spacing={2} className={classes.infoContainer}>
+              <Grid style={{ paddingTop: "0px" }} xs={12} sm={4}>
+                <h4 className={classes.infoTitle}>Phone: </h4>
+              </Grid>
+              <Grid style={{ paddingTop: "0px" }} xs={12} sm={8}>
+                <h4 className={classes.info}>1.503.475.8785</h4>
+              </Grid>
             </Grid>
-          </Grid>
-          <Grid container spacing={2} className={classes.infoContainer}>
-            <Grid style={{ paddingTop: "0px" }} xs={12} sm={4}>
-              <h4 className={classes.infoTitle}>Phone: </h4>
-            </Grid>
-            <Grid style={{ paddingTop: "0px" }} xs={12} sm={8}>
-              <h4 className={classes.info}>1.503.475.8785</h4>
-            </Grid>
-          </Grid>
-          <hr className={classes.underLine}></hr>
-          <Typography paragraph className={classes.headerParagraph}>
-            {headerParagraph}
-          </Typography>
-          <hr className={classes.underLine}></hr>
+            <hr className={classes.underLine}></hr>
+            <Typography paragraph className={classes.headerParagraph}>
+              {headerParagraph}
+            </Typography>
+            <hr
+              className={classes.underLine}
+              style={{ marginTop: "50px" }}
+            ></hr>
+          </Container>
         </Grid>
       </Grid>
       <Container className={classes.logoContainer}>
