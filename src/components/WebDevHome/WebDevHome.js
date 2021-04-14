@@ -36,26 +36,26 @@ const WebDevHome = () => {
   // const [state, dispatch] = useStoreContext();
   const changeWebState = useSelector((state) => state.changeWebState);
 
-  const changeWidth = useSelector((gridWidth) => gridWidth.changeWidth);
-  const dispatch = useDispatch();
-  const fullChange = () => {
-    if (changeWidth === 6) {
-      dispatch(CHANGE_WEB_STATE());
-      dispatch(WEB_TITLE());
-      dispatch(WEB_ABOUT());
-      dispatch(CHANGE_WIDTH());
-    } else dispatch(RESET());
-  };
+  // const changeWidth = useSelector((gridWidth) => gridWidth.changeWidth);
+  // const dispatch = useDispatch();
+  // const fullChange = () => {
+  //   if (changeWidth === 6) {
+  //     dispatch(CHANGE_WEB_STATE());
+  //     dispatch(WEB_TITLE());
+  //     dispatch(WEB_ABOUT());
+  //     dispatch(CHANGE_WIDTH());
+  //   } else dispatch(RESET());
+  // };
   return (
     // <Grid item xs={12} sm={state.home.web.gridWidth}>
-    <Grid item xs={12} sm={changeWidth}>
+    <Grid item xs={12} sm={12}>
       <div className={classes.root}>
         <Grid container spacing={3}>
           <Grid item xs={12}>
             <Button
               style={{ width: "100%" }}
               className={(classes.paper, classes.header)}
-              onClick={() => fullChange()}
+              // onClick={() => fullChange()}
               // onClick={webDevSH}
             >
               Web Development
@@ -71,7 +71,7 @@ const WebDevHome = () => {
               paragraph,
               technology,
             }) => (
-              <Grid item xs={changeWidth} sm={6}>
+              <Grid item xs={12} sm={6}>
                 {changeWebState ? (
                   <WebProject
                     key={title}

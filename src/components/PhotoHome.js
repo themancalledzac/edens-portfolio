@@ -36,39 +36,39 @@ const PhotoHome = () => {
 
   const changeWidth = useSelector((gridWidth) => gridWidth.changeWidth);
   const dispatch = useDispatch();
-  const fullChange = () => {
-    if (changeWidth === 6) {
-      dispatch(CHANGE_PHOTO_STATE());
-      dispatch(CHANGE_WIDTH());
-      dispatch(PHOTO_TITLE());
-      dispatch(PHOTO_ABOUT());
-    } else dispatch(RESET());
-  };
+  // const fullChange = () => {
+  //   if (changeWidth === 6) {
+  //     dispatch(CHANGE_PHOTO_STATE());
+  //     dispatch(CHANGE_WIDTH());
+  //     dispatch(PHOTO_TITLE());
+  //     dispatch(PHOTO_ABOUT());
+  //   } else dispatch(RESET());
+  // };
 
   return (
-    <Grid item xs={12} sm={changeWidth}>
+    <Grid item xs={12} sm={12}>
       <div className={classes.root}>
         <Grid container spacing={3}>
           <Grid item xs={12}>
             <Button
               style={{ width: "100%" }}
               className={(classes.paper, classes.header)}
-              onClick={() => fullChange()}
+              // onClick={() => fullChange()}
             >
               Photography
             </Button>
           </Grid>
 
-          <Grid item xs={changeWidth} sm={6}>
+          <Grid item xs={12} sm={6}>
             <Paper className={classes.paper}>Corporate</Paper>
           </Grid>
-          <Grid item xs={changeWidth} sm={6}>
+          <Grid item xs={12} sm={6}>
             <Paper className={classes.paper}>Portrait</Paper>
           </Grid>
-          <Grid item xs={changeWidth} sm={6}>
+          <Grid item xs={112} sm={6}>
             <Paper className={classes.paper}>Street</Paper>
           </Grid>
-          <Grid item xs={changeWidth} sm={6}>
+          <Grid item xs={112} sm={6}>
             <Paper className={classes.paper}>Landscape</Paper>
           </Grid>
         </Grid>
