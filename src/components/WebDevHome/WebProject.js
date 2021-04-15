@@ -19,7 +19,7 @@ const useStyles = makeStyles(() => ({
 
 const WebProject = (props) => {
   const classes = useStyles();
-  console.log(props);
+  // console.log(props);
   return (
     <>
       <Container>

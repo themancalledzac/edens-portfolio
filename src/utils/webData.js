@@ -14,7 +14,7 @@ const WebData = [
   },
   {
     title: "Student Management",
-    link: "https://rocky-everglades-87417.herokuapp.com/",
+    link: "https://student-management-edens.herokuapp.com/",
     gitHubLink: "https://github.com/themancalledzac/Student-Management-System",
     paragraph:
       "Incorporating a MySQL database with a first look at a modular front end using handlebars, this team project allowed for a front end system that allowed users, once logged in, to select both teachers and classes to be added or removed from their homepage. Heading this project, I was in charge of the database structure, setup, and routes, along with the general layout and design of the front end.",
