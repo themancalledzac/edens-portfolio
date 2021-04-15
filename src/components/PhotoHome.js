@@ -46,10 +46,10 @@ const PhotoHome = () => {
           <Grid item xs={12} sm={6}>
             <Paper className={classes.paper}>Portrait</Paper>
           </Grid>
-          <Grid item xs={112} sm={6}>
+          <Grid item xs={12} sm={6}>
             <Paper className={classes.paper}>Street</Paper>
           </Grid>
-          <Grid item xs={112} sm={6}>
+          <Grid item xs={12} sm={6}>
             <Paper className={classes.paper}>Landscape</Paper>
           </Grid>
         </Grid>

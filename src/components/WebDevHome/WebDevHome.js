@@ -71,7 +71,7 @@ const WebDevHome = () => {
               paragraph,
               technology,
             }) => (
-              <Grid item xs={12} sm={6}>
+              <Grid key={title} item xs={12} sm={6}>
                 {changeWebState ? (
                   <WebProject
                     key={title}
