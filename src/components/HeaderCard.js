@@ -95,13 +95,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 const HeaderCard = ({ title, paragraph, image }) => {
   const classes = useStyles();
-  const headerTitle = useSelector((title) => title.headerTitle);
-  const headerParagraph = useSelector((paragraph) => paragraph.headerParagraph);
-  // future development
-  const headerImage = useSelector((image) => image.headerImage);
-  //   console.log(portrait);
-  //   console.log(headerImage.src);
-  //   console.log(headerImage.title);
+
   return (
     <>
       <Grid style={{ marginTop: "5rem" }} container spacing={3}>

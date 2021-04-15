@@ -4,13 +4,6 @@ import React from "react";
 // import { useStoreContext } from "../utils/GlobalState";
 import colors from "./colors";
 import { useSelector, useDispatch } from "react-redux";
-import {
-  CHANGE_PHOTO_STATE,
-  CHANGE_WIDTH,
-  PHOTO_ABOUT,
-  PHOTO_TITLE,
-  RESET,
-} from "../utils/actions";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -32,18 +25,6 @@ const useStyles = makeStyles((theme) => ({
 
 const PhotoHome = () => {
   const classes = useStyles();
-  // const [state, dispatch] = useStoreContext();
-
-  const changeWidth = useSelector((gridWidth) => gridWidth.changeWidth);
-  const dispatch = useDispatch();
-  // const fullChange = () => {
-  //   if (changeWidth === 6) {
-  //     dispatch(CHANGE_PHOTO_STATE());
-  //     dispatch(CHANGE_WIDTH());
-  //     dispatch(PHOTO_TITLE());
-  //     dispatch(PHOTO_ABOUT());
-  //   } else dispatch(RESET());
-  // };
 
   return (
     <Grid item xs={12} sm={12}>
