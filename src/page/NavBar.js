@@ -30,7 +30,7 @@ import Home from "./Home";
 
 import colors from "../components/colors";
 import { useDispatch, useSelector } from "react-redux";
-import resume from "../assets/Edens_Resume.pdf";
+import resume from "../assets/edens-resume.pdf";
 import {
   CHANGE_WEB_STATE,
   CHANGE_PHOTO_STATE,

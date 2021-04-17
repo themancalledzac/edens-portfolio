@@ -1,4 +1,10 @@
-import { Container, Grid, makeStyles, Typography } from "@material-ui/core";
+import {
+  Container,
+  Grid,
+  makeStyles,
+  Tooltip,
+  Typography,
+} from "@material-ui/core";
 import React from "react";
 import { useSelector } from "react-redux";
 import colors from "./colors";
@@ -92,6 +98,11 @@ const useStyles = makeStyles((theme) => ({
       paddingRight: "0",
     },
   },
+  logo: {
+    "&:hover": {
+      cursor: "pointer",
+    },
+  },
 }));
 const HeaderCard = ({ title, paragraph, image }) => {
   const classes = useStyles();
@@ -118,7 +129,9 @@ const HeaderCard = ({ title, paragraph, image }) => {
                 <h4 className={classes.infoTitle}>Email: </h4>
               </Grid>
               <Grid item style={{ paddingBottom: "0px" }} xs={12} sm={8}>
-                <h4 className={classes.info}>edens.zac@gmail.com</h4>
+                <Tooltip title='copy' arrow>
+                  <h4 className={classes.info}>edens.zac@gmail.com</h4>
+                </Tooltip>
               </Grid>
             </Grid>
             <Grid container spacing={2} className={classes.infoContainer}>
@@ -146,33 +159,116 @@ const HeaderCard = ({ title, paragraph, image }) => {
             <Grid container spacing={2}>
               <Grid item className={classes.logo} xs={12} sm={12} md={6}>
                 <Grid container spacing={2}>
-                  <Grid className={classes.logo} item xs={3} sm={3}>
-                    <JavaScriptLogo />
+                  <Grid
+                    className={classes.logo}
+                    item
+                    xs={3}
+                    sm={3}
+                    onClick={() =>
+                      window.open("https://www.javascript.com/", "_blank")
+                    }
+                  >
+                    <Tooltip title='JavaScript' arrow>
+                      <JavaScriptLogo />
+                    </Tooltip>
                   </Grid>
-                  <Grid className={classes.logo} item xs={3} sm={3}>
-                    <CssLogo />
+                  <Grid
+                    className={classes.logo}
+                    item
+                    xs={3}
+                    sm={3}
+                    onClick={() =>
+                      window.open("https://www.w3schools.com/css/", "_blank")
+                    }
+                  >
+                    <Tooltip title='CSS3' arrow>
+                      <CssLogo />
+                    </Tooltip>
                   </Grid>
-                  <Grid className={classes.logo} item xs={3} sm={3}>
-                    <HtmlLogo />
+                  <Grid
+                    className={classes.logo}
+                    item
+                    xs={3}
+                    sm={3}
+                    onClick={() =>
+                      window.open(
+                        "https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5",
+                        "_blank"
+                      )
+                    }
+                  >
+                    <Tooltip title='HTML5' arrow>
+                      <HtmlLogo />
+                    </Tooltip>
                   </Grid>
-                  <Grid className={classes.logo} item xs={3} sm={3}>
-                    <ReactLogo />
+                  <Grid
+                    className={classes.logo}
+                    item
+                    xs={3}
+                    sm={3}
+                    onClick={() =>
+                      window.open("https://reactjs.org/", "_blank")
+                    }
+                  >
+                    <Tooltip title='React' arrow>
+                      <ReactLogo />
+                    </Tooltip>
                   </Grid>
                 </Grid>
               </Grid>
               <Grid item className={classes.logo} xs={12} sm={12} md={6}>
                 <Grid container spacing={2}>
-                  <Grid className={classes.logo} item xs={3} sm={3}>
-                    <NodeJsLogo />
+                  <Grid
+                    className={classes.logo}
+                    item
+                    xs={3}
+                    sm={3}
+                    onClick={() =>
+                      window.open("https://nodejs.org/en/", "_blank")
+                    }
+                  >
+                    <Tooltip title='NodeJS' arrow>
+                      <NodeJsLogo />
+                    </Tooltip>
                   </Grid>
-                  <Grid className={classes.logo} item xs={3} sm={3}>
-                    <MysqlLogo />
+                  <Grid
+                    className={classes.logo}
+                    item
+                    xs={3}
+                    sm={3}
+                    onClick={() =>
+                      window.open("https://www.mysql.com/", "_blank")
+                    }
+                  >
+                    <Tooltip title='MySQL' arrow>
+                      <MysqlLogo />
+                    </Tooltip>
                   </Grid>
-                  <Grid className={classes.logo} item xs={3} sm={3}>
-                    <ExpressLogo />
+                  <Grid
+                    className={classes.logo}
+                    item
+                    xs={3}
+                    sm={3}
+                    onClick={() =>
+                      window.open("https://expressjs.com/", "_blank")
+                    }
+                  >
+                    <Tooltip title='Express' arrow>
+                      <ExpressLogo />
+                    </Tooltip>
                   </Grid>
-                  <Grid className={classes.logo} item xs={3} sm={3}>
-                    <GitLogo />
+                  <Grid
+                    className={classes.logo}
+                    item
+                    xs={3}
+                    sm={3}
+                    onClick={() =>
+                      window.open("https://git-scm.com/", "_blank")
+                    }
+                  >
+                    <Tooltip title='Git' arrow>
+                      <GitLogo />
+                    </Tooltip>
                   </Grid>
                 </Grid>
               </Grid>
@@ -182,33 +278,112 @@ const HeaderCard = ({ title, paragraph, image }) => {
             <Grid container spacing={2}>
               <Grid item className={classes.logo} xs={12} sm={12} md={6}>
                 <Grid container spacing={2}>
-                  <Grid className={classes.logo} item xs={3} sm={3}>
-                    <GithubLogo />
+                  <Grid
+                    className={classes.logo}
+                    item
+                    xs={3}
+                    sm={3}
+                    onClick={() => window.open("https://github.com/", "_blank")}
+                  >
+                    <Tooltip title='Github' arrow>
+                      <GithubLogo />
+                    </Tooltip>
                   </Grid>
-                  <Grid className={classes.logo} item xs={3} sm={3}>
-                    <MaterialUiLogo />
+                  <Grid
+                    className={classes.logo}
+                    item
+                    xs={3}
+                    sm={3}
+                    onClick={() =>
+                      window.open("https://material-ui.com/", "_blank")
+                    }
+                  >
+                    <Tooltip title='Material-UI' arrow>
+                      <MaterialUiLogo />
+                    </Tooltip>
                   </Grid>
-                  <Grid className={classes.logo} item xs={3} sm={3}>
-                    <MongoDbLogo />
+                  <Grid
+                    className={classes.logo}
+                    item
+                    xs={3}
+                    sm={3}
+                    onClick={() =>
+                      window.open("https://www.mongodb.com/", "_blank")
+                    }
+                  >
+                    <Tooltip title='MongoDB' arrow>
+                      <MongoDbLogo />
+                    </Tooltip>
                   </Grid>
-                  <Grid className={classes.logo} item xs={3} sm={3}>
-                    <ReduxLogo />
+                  <Grid
+                    className={classes.logo}
+                    item
+                    xs={3}
+                    sm={3}
+                    onClick={() =>
+                      window.open("https://redux.js.org/", "_blank")
+                    }
+                  >
+                    <Tooltip title='Redux' arrow>
+                      <ReduxLogo />
+                    </Tooltip>
                   </Grid>
                 </Grid>
               </Grid>
               <Grid item className={classes.logo} xs={12} sm={12} md={6}>
                 <Grid container spacing={2}>
-                  <Grid className={classes.logo} item xs={3} sm={3}>
-                    <JQueryLogo />
+                  <Grid
+                    className={classes.logo}
+                    item
+                    xs={3}
+                    sm={3}
+                    onClick={() => window.open("https://jquery.com/", "_blank")}
+                  >
+                    <Tooltip title='JQuery' arrow>
+                      <JQueryLogo />
+                    </Tooltip>
                   </Grid>
-                  <Grid className={classes.logo} item xs={3} sm={3}>
-                    <SequelizeLogo />
+                  <Grid
+                    className={classes.logo}
+                    item
+                    xs={3}
+                    sm={3}
+                    onClick={() =>
+                      window.open("https://sequelize.org/", "_blank")
+                    }
+                  >
+                    <Tooltip title='Sequelize' arrow>
+                      <SequelizeLogo />
+                    </Tooltip>
                   </Grid>
-                  <Grid className={classes.logo} item xs={3} sm={3}>
-                    <VisualStudioLogo />
+                  <Grid
+                    className={classes.logo}
+                    item
+                    xs={3}
+                    sm={3}
+                    onClick={() =>
+                      window.open("https://code.visualstudio.com/", "_blank")
+                    }
+                  >
+                    <Tooltip title='VS Code' arrow>
+                      <VisualStudioLogo />
+                    </Tooltip>
                   </Grid>
-                  <Grid className={classes.logo} item xs={3} sm={3}>
-                    <PhotoshopLogo />
+                  <Grid
+                    className={classes.logo}
+                    item
+                    xs={3}
+                    sm={3}
+                    onClick={() =>
+                      window.open(
+                        "https://www.adobe.com/products/photoshop.html",
+                        "_blank"
+                      )
+                    }
+                  >
+                    <Tooltip title='Photoshop' arrow>
+                      <PhotoshopLogo />
+                    </Tooltip>
                   </Grid>
                 </Grid>
               </Grid>
