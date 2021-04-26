@@ -38,8 +38,9 @@
 
 ## Description
 
-Updated portfolio, including a Resume link, 4 of my most prominent projects, links to all social media, including Github and LinkedIn.  This portfolio utilizes React and Redux, moving into a single page application with multi-page functionality. 
+Updated portfolio, including a Resume link, 4 of my most prominent projects, links to all social media, including Github and LinkedIn. This portfolio utilizes React and Redux, moving into a single page application with multi-page functionality.
 
+![portfolio](./images/edensPortfolio.gif)
 
 ## Acceptance Criteria
 
