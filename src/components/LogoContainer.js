@@ -1,4 +1,4 @@
-import { Container, Grid, makeStyles, Tooltip } from "@material-ui/core";
+import { Container, Grid, makeStyles } from "@material-ui/core";
 import React from "react";
 import LogoContainerSingle from "./LogoContainerSingle";
 
@@ -7,7 +7,7 @@ const useStyles = makeStyles((theme) => ({
     maxWidth: "85%",
     marginBottom: "30px",
     [theme.breakpoints.up("md")]: {
-      marginTop: "60px",
+      marginTop: "45px",
     },
     marginTop: "30px",
   },

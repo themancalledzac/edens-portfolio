@@ -51,18 +51,17 @@ const Home = () => {
         ) : (
           ""
         )}
-        {changePhotoState ? (
-          <HeaderCard
-            title={aboutData[2].title}
-            paragraph={aboutData[2].paragraph}
-            image={aboutData[2].image}
-          />
-        ) : (
-          ""
-        )}
+        {changePhotoState
+          ? // <HeaderCard
+            // title={aboutData[2].title}
+            // paragraph={aboutData[2].paragraph}
+            // image={aboutData[2].image}
+            // />
+            ""
+          : ""}
         {/*<AboutMe /> */}
         <Grid container spacing={3}>
-          {changePhotoState ? <PhotoHome /> : ""}
+          {changePhotoState ? <PhotoHome color={colors.blue} /> : ""}
           {changeWebState ? <WebDevHome /> : ""}
         </Grid>
       </Container>
@@ -72,7 +71,7 @@ const Home = () => {
 
 export default Home;
 
-// TODO
+// TODO:
 // Change state so that Web, Photo, and About are three separate pages inside the home Page
 // only one state is true per page, which makes each other state false.  this state is universal
 // about page is a single page, no need to scroll, maybe we can make it full screen size for a few different screen sizes?

@@ -27,6 +27,10 @@ import TwitterIcon from "@material-ui/icons/Twitter";
 import FileCopyIcon from "@material-ui/icons/FileCopy";
 import { Route, Switch } from "react-router-dom";
 import Home from "./Home";
+import Event from "./Event";
+import Portrait from "./Portrait";
+import Street from "./Street";
+import Landscape from "./Landscape";
 
 import colors from "../components/colors";
 import { useDispatch, useSelector } from "react-redux";
@@ -47,7 +51,7 @@ const useStyles = makeStyles((theme) => ({
   },
   appBar: {
     zIndex: theme.zIndex.drawer + 1,
-    backgroundColor: colors.orange,
+    backgroundColor: (props) => props.color,
 
     transition: theme.transitions.create(["width", "margin"], {
       easing: theme.transitions.easing.sharp,
@@ -75,14 +79,14 @@ const useStyles = makeStyles((theme) => ({
   },
   drawerOpen: {
     width: drawerWidth,
-    backgroundColor: colors.orange,
+    backgroundColor: (props) => props.color,
     transition: theme.transitions.create("width", {
       easing: theme.transitions.easing.sharp,
       duration: theme.transitions.duration.enteringScreen,
     }),
   },
   drawerClose: {
-    backgroundColor: colors.orange,
+    backgroundColor: (props) => props.color,
     transition: theme.transitions.create("width", {
       easing: theme.transitions.easing.sharp,
       duration: theme.transitions.duration.leavingScreen,
@@ -112,8 +116,8 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 // export -------------------------------------------------
-export default function NavBar() {
-  const classes = useStyles();
+export default function NavBar(props) {
+  const classes = useStyles(props);
   const theme = useTheme();
   const [open, setOpen] = React.useState(false);
   const changeWebState = useSelector((state) => state.changeWebState);
@@ -128,10 +132,11 @@ export default function NavBar() {
   };
   const dispatch = useDispatch();
 
-  const clickWeb = () => {
+  const clickWeb = async () => {
     if (changePhotoState === false) {
-      dispatch(CHANGE_WEB_STATE(true));
-      dispatch(ABOUT_STATE(false));
+      await dispatch(CHANGE_WEB_STATE(true));
+      await dispatch(ABOUT_STATE(false));
+      await window.scrollBy({ left: 0, top: 800, behavior: "smooth" });
       return;
     }
     if (changePhotoState === true) {
@@ -157,8 +162,14 @@ export default function NavBar() {
       dispatch(RESET());
     }
   };
-  const clickAbout = () => {
-    dispatch(RESET());
+  const clickAbout = async () => {
+    await window.scrollBy({ left: 0, top: -5000, behavior: "smooth" });
+    await dispatch(RESET());
+  };
+
+  const colorChange = {
+    // if(changePhotoState === true) {}
+    // backgroundColor: colors.blue,
   };
 
   return (
@@ -166,6 +177,7 @@ export default function NavBar() {
       <CssBaseline />
       <AppBar
         position='fixed'
+        style={colorChange}
         className={clsx(classes.appBar, {
           [classes.appBarShift]: open,
         })}
@@ -176,6 +188,7 @@ export default function NavBar() {
             aria-label='open drawer'
             onClick={handleDrawerOpen}
             edge='start'
+            style={colorChange}
             className={clsx(classes.menuButton, {
               [classes.hide]: open,
             })}
@@ -194,6 +207,7 @@ export default function NavBar() {
           [classes.drawerOpen]: open,
           [classes.drawerClose]: !open,
         })}
+        style={colorChange}
         classes={{
           paper: clsx({
             [classes.drawerOpen]: open,
@@ -201,7 +215,7 @@ export default function NavBar() {
           }),
         }}
       >
-        <div className={classes.toolbar}>
+        <div style={colorChange} className={classes.toolbar}>
           <IconButton onClick={handleDrawerClose}>
             {theme.direction === "rtl" ? (
               <ChevronRightIcon />
@@ -333,6 +347,10 @@ export default function NavBar() {
 
         <Switch>
           <Route exact path='/' component={Home} />
+          <Route exact path='/event' component={Event} />
+          <Route exact path='/portrait' component={Portrait} />
+          <Route exact path='/street' component={Street} />
+          <Route exact path='/landscape' component={Landscape} />
         </Switch>
       </main>
     </div>

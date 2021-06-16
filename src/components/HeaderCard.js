@@ -121,7 +121,7 @@ const HeaderCard = ({ title, paragraph, image }) => {
 
   return (
     <>
-      <Grid style={{ marginTop: "5rem" }} container spacing={3}>
+      <Grid style={{ marginTop: "2rem" }} container spacing={3}>
         <Grid item xs={12} sm={12} md={6}>
           <img className={classes.portrait} src={image} alt='portrait' />
         </Grid>

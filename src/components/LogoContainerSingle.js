@@ -17,7 +17,10 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
+
+
 const LogoContainerSingle = ({ tech }) => {
+  
   const classes = useStyles();
   return (
     <Grid item className={classes.logo} xs={12} sm={12} md={6}>

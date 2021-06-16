@@ -3,15 +3,7 @@ import React from "react";
 import colors from "../colors";
 import { useSelector, useDispatch } from "react-redux";
 
-import {
-  CHANGE_WEB_STATE,
-  CHANGE_WIDTH,
-  RESET,
-  WEB_TITLE,
-  WEB_ABOUT,
-  ABOUT_STATE,
-  CHANGE_PHOTO_STATE,
-} from "../../utils/actions";
+import { CHANGE_WEB_STATE, RESET, ABOUT_STATE } from "../../utils/actions";
 import WebProject from "../Project.js";
 // import webProjects from "../../utils/webProjectCard";
 import WebData from "../../utils/webData";
