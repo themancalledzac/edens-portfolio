@@ -3,7 +3,8 @@ import React from "react";
 // import { HOME_PHOTO_FULL } from "../utils/actions";
 // import { useStoreContext } from "../utils/GlobalState";
 import colors from "./colors";
-import { useSelector, useDispatch } from "react-redux";
+// import { useSelector, useDispatch } from "react-redux";
+import eventImage from "../assets/photography/event/Header1.jpg";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -12,19 +13,34 @@ const useStyles = makeStyles((theme) => ({
   paper: {
     padding: theme.spacing(2),
     textAlign: "center",
+    height: "8rem",
     color: theme.palette.text.secondary,
   },
   header: {
     padding: theme.spacing(2),
     textAlign: "center",
-    color: theme.palette.text.primary,
-    backgroundColor: colors.primary,
+    color: colors.white,
+    backgroundColor: colors.blue,
+  },
+  event: {
+    padding: theme.spacing(3),
+    backgroundImage: `url(${eventImage})`,
+    backgroundPosition: "center",
+    textAlign: "center",
+    color: "white",
+    backgroundSize: "cover",
+    backgroundRepeat: "no-repeat",
+    height: "8rem",
+    "&:hover, &:focus": {
+      opacity: "75%",
+      cursor: "pointer",
+    },
   },
 }));
 // <Grid item xs={12} sm={state.home.photo.gridWidth}>
 
-const PhotoHome = () => {
-  const classes = useStyles();
+export default function PhotoHome(props) {
+  const classes = useStyles(props);
 
   return (
     <Grid item xs={12} sm={12}>
@@ -41,7 +57,7 @@ const PhotoHome = () => {
           </Grid>
 
           <Grid item xs={12} sm={6}>
-            <Paper className={classes.paper}>Corporate</Paper>
+            <Paper className={(classes.paper, classes.event)}>Event</Paper>
           </Grid>
           <Grid item xs={12} sm={6}>
             <Paper className={classes.paper}>Portrait</Paper>
@@ -56,6 +72,4 @@ const PhotoHome = () => {
       </div>
     </Grid>
   );
-};
-
-export default PhotoHome;
+}
