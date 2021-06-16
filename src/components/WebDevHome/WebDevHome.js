@@ -9,8 +9,10 @@ import {
   RESET,
   WEB_TITLE,
   WEB_ABOUT,
+  ABOUT_STATE,
+  CHANGE_PHOTO_STATE,
 } from "../../utils/actions";
-import WebProject from "./WebProject";
+import WebProject from "../Project.js";
 // import webProjects from "../../utils/webProjectCard";
 import WebData from "../../utils/webData";
 
@@ -35,6 +37,7 @@ const WebDevHome = () => {
   const classes = useStyles();
   // const [state, dispatch] = useStoreContext();
   const changeWebState = useSelector((state) => state.changeWebState);
+  const dispatch = useDispatch();
 
   // const changeWidth = useSelector((gridWidth) => gridWidth.changeWidth);
   // const dispatch = useDispatch();
@@ -46,6 +49,18 @@ const WebDevHome = () => {
   //     dispatch(CHANGE_WIDTH());
   //   } else dispatch(RESET());
   // };
+
+  const clickWeb = async () => {
+    if (changeWebState === true) {
+      await dispatch(CHANGE_WEB_STATE(false));
+      await dispatch(ABOUT_STATE(true));
+      await window.scrollBy({ left: 0, top: -800, behavior: "smooth" });
+      return;
+    } else {
+      dispatch(RESET());
+    }
+  };
+
   return (
     // <Grid item xs={12} sm={state.home.web.gridWidth}>
     <Grid item xs={12} sm={12}>
@@ -55,7 +70,7 @@ const WebDevHome = () => {
             <Button
               style={{ width: "100%" }}
               className={(classes.paper, classes.header)}
-              // onClick={() => fullChange()}
+              onClick={() => clickWeb()}
               // onClick={webDevSH}
             >
               Web Development
@@ -70,6 +85,7 @@ const WebDevHome = () => {
               image02,
               paragraph,
               technology,
+              tech,
             }) => (
               <Grid key={title} item xs={12} sm={6}>
                 {changeWebState ? (
@@ -82,6 +98,7 @@ const WebDevHome = () => {
                     image2={image02}
                     paragraph={paragraph}
                     technology={technology}
+                    tech={tech}
                   />
                 ) : (
                   <Paper className={classes.paper}>{title}</Paper>

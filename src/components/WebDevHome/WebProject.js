@@ -7,6 +7,8 @@ import {
 } from "@material-ui/core";
 import React from "react";
 import colors from "../colors";
+import LogoContainerSingle from "../LogoContainerSingle";
+import techData from "../../utils/techData";
 
 // import studentImage from "../../assets/images/StudentManagement-01.jpg";
 
@@ -33,7 +35,18 @@ const useStyles = makeStyles(() => ({
   },
 }));
 
-const WebProject = (props) => {
+const techOne = techData.slice(0, 4);
+const techTwo = techData.slice(4, 8);
+
+const WebProject = ({
+  title,
+  link,
+  gitHubLink,
+  image01,
+  technology,
+  paragraph,
+  tech,
+}) => {
   const classes = useStyles();
   // console.log(props);
   return (
@@ -42,27 +55,29 @@ const WebProject = (props) => {
         <Container>
           <Typography
             className={classes.header}
-            onClick={() => window.open(`${props.link}`, "_blank")}
+            onClick={() => window.open(`${link}`, "_blank")}
           >
-            {props.title}
+            {title}
           </Typography>
           <hr></hr>
           <Button
             className={classes.github}
-            onClick={() => window.open(`${props.gitHubLink}`, "_blank")}
+            onClick={() => window.open(`${gitHubLink}`, "_blank")}
           >
             Github Link
           </Button>
           <img
             className={classes.image}
-            src={props.image01.src}
-            alt={props.image01.title}
-            onClick={() => window.open(`${props.link}`, "_blank")}
+            src={image01.src}
+            alt={image01.title}
+            onClick={() => window.open(`${link}`, "_blank")}
           />
-          <p>{props.paragraph}</p>
+          <p>{paragraph}</p>
           <br></br>
           <h3>Technologies used</h3>
-          <p style={{ textDecoration: "underline" }}>{props.technology}</p>
+          {/* <LogoContainerSingle tech={{ tech }} />
+  How do we map just the name of the const that is called above on line 38 and 39? */}
+          <p style={{ textDecoration: "underline" }}>{technology}</p>
           <br></br>
           <br></br>
           <br></br>

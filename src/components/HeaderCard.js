@@ -1,4 +1,5 @@
 import {
+  Button,
   Container,
   Grid,
   makeStyles,
@@ -9,6 +10,8 @@ import React from "react";
 import colors from "./colors";
 import techData from "../utils/techData";
 import LogoContainer from "./LogoContainer";
+import { useDispatch, useSelector } from "react-redux";
+import { ABOUT_STATE, CHANGE_WEB_STATE, RESET } from "../utils/actions";
 
 const useStyles = makeStyles((theme) => ({
   portrait: {
@@ -88,6 +91,12 @@ const useStyles = makeStyles((theme) => ({
       cursor: "pointer",
     },
   },
+  header: {
+    padding: theme.spacing(2),
+    textAlign: "center",
+    color: theme.palette.text.primary,
+    backgroundColor: colors.primary,
+  },
 }));
 
 const techOne = techData.slice(0, 4);
@@ -96,6 +105,19 @@ const techThree = techData.slice(8, 12);
 const techFour = techData.slice(12, 16);
 const HeaderCard = ({ title, paragraph, image }) => {
   const classes = useStyles();
+  const changeWebState = useSelector((state) => state.changeWebState);
+  const dispatch = useDispatch();
+
+  const clickWeb = async () => {
+    if (changeWebState === false) {
+      await dispatch(CHANGE_WEB_STATE(true));
+      await dispatch(ABOUT_STATE(false));
+      await window.scrollBy({ left: 0, top: 800, behavior: "smooth" });
+      return;
+    } else {
+      dispatch(RESET());
+    }
+  };
 
   return (
     <>
@@ -136,12 +158,20 @@ const HeaderCard = ({ title, paragraph, image }) => {
             <Typography paragraph className={classes.headerParagraph}>
               {paragraph}
             </Typography>
-            <hr
-              className={classes.underLine}
-              style={{ marginTop: "50px" }}
-            ></hr>
           </Container>
         </Grid>
+        {!changeWebState ? (
+          <Button
+            style={{ width: "100%" }}
+            className={(classes.paper, classes.header)}
+            onClick={() => clickWeb()}
+            // onClick={webDevSH}
+          >
+            Click for Web Development
+          </Button>
+        ) : (
+          <hr></hr>
+        )}
       </Grid>
       <LogoContainer
         techOne={techOne}

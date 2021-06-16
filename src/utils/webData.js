@@ -11,21 +11,21 @@ const WebData = [
       src: require("../assets/virtualAcystant.gif").default,
       title: "Student Management App Image number one.",
     },
+    tech: "techOne",
   },
   {
-    title: "Student Management",
-    link: "https://student-management-edens.herokuapp.com/",
-    gitHubLink: "https://github.com/themancalledzac/Student-Management-System",
+    title: "Book Search",
+    link: "https://google-book-search-edens.herokuapp.com/",
+    gitHubLink: "https://github.com/themancalledzac/book-search-react",
     paragraph:
-      "Incorporating a MySQL database with a first look at a modular front end using handlebars, this team project allowed for a front end system that allowed users, once logged in, to select both teachers and classes to be added or removed from their homepage. Heading this project, I was in charge of the database structure, setup, and routes, along with the general layout and design of the front end.",
-    role:
-      "Project lead, including building the majority of the back end, along with the general layout and design of the front end.",
-    technology:
-      "Javascript, jQuery, node.js, mySQL, Sequelize, Bootstrap and Handlebars",
+      "First project using the MERN stack, including the Google Books API, users can search for books, and add them to a 'save' list for later viewing.  Future changes will be adding a user authentication so each users saved page is unique.",
+    role: "Personal Project.",
+    technology: "Javascript, React, Express, MongoDB, Material-UI",
     image01: {
-      src: require("../assets/StudentRatingTool.gif").default,
-      title: "Gif presentation of App.",
+      src: require("../assets/bookSearch.gif").default,
+      title: "Student Management App Image number one.",
     },
+    tech: "techOne",
   },
   {
     title: "Employee Directory",
@@ -39,18 +39,22 @@ const WebData = [
       src: require("../assets/employeeDirectory.gif").default,
       title: "Student Management App Image number one.",
     },
+    tech: "techOne",
   },
   {
-    title: "Book Search",
-    link: "https://google-book-search-edens.herokuapp.com/",
-    gitHubLink: "https://github.com/themancalledzac/book-search-react",
-    paragraph: "Our first Mern stack application. Currently in development",
-    role: "Personal Project.",
-    technology: "Javascript, React, Express, MongoDB, Material-UI",
+    title: "Student Management",
+    link: "https://student-management-edens.herokuapp.com/",
+    gitHubLink: "https://github.com/themancalledzac/Student-Management-System",
+    paragraph:
+      "Incorporating a MySQL database with a first look at a modular front end using handlebars, this team project allowed for a front end system that allowed users, once logged in, to select both teachers and classes to be added or removed from their homepage. Heading this project, I was in charge of the database structure, setup, and routes, along with the general layout and design of the front end.",
+    role: "Project lead, including building the majority of the back end, along with the general layout and design of the front end.",
+    technology:
+      "Javascript, jQuery, node.js, mySQL, Sequelize, Bootstrap and Handlebars",
     image01: {
-      src: require("../assets/bookSearch.gif").default,
-      title: "Student Management App Image number one.",
+      src: require("../assets/StudentRatingTool.gif").default,
+      title: "Gif presentation of App.",
     },
+    tech: "techTwo",
   },
 ];
 
