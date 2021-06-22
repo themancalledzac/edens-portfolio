@@ -1,10 +1,12 @@
 import {
   Button,
   Container,
+  Link,
   makeStyles,
   Paper,
   Typography,
 } from "@material-ui/core";
+import { useHistory } from "react-router-dom";
 
 const useStyles = makeStyles(() => ({
   header: {
@@ -20,20 +22,23 @@ const useStyles = makeStyles(() => ({
     border: "5px solid white",
     borderBottom: "15px solid white",
     borderTop: "15px solid white",
+    textAlign: "center",
   },
 }));
 
-const PhotoCard = ({ title, image }) => {
+const PhotoCard = ({ title, image, nav }) => {
+  const history = useHistory();
+  const handleClick = async () => {
+    const name = { nav };
+    history.push(name.nav, "_blank");
+  };
   const classes = useStyles();
   return (
     <>
       <Paper elevation={3}>
         <Container>
-          <Typography
-            className={classes.header}
-            // onClick={() => window.open()}
-          >
-            {title}
+          <Typography className={classes.header}>
+            <Button onClick={handleClick}>{title}</Button>
           </Typography>
           <hr></hr>
           <img className={classes.image} src={image.src} alt={image.title} />

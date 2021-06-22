@@ -27,11 +27,12 @@ import TwitterIcon from "@material-ui/icons/Twitter";
 import FileCopyIcon from "@material-ui/icons/FileCopy";
 import { Route, Switch } from "react-router-dom";
 import Home from "./Home";
+import Photography from "./Photography";
 import Event from "./Event";
 import Portrait from "./Portrait";
 import Street from "./Street";
 import Landscape from "./Landscape";
-
+import { useHistory } from "react-router-dom";
 import colors from "../components/colors";
 import { useDispatch, useSelector } from "react-redux";
 import resume from "../assets/edens-resume.pdf";
@@ -122,6 +123,7 @@ export default function NavBar(props) {
   const [open, setOpen] = React.useState(false);
   const changeWebState = useSelector((state) => state.changeWebState);
   const changePhotoState = useSelector((state) => state.changePhotoState);
+  const history = useHistory();
 
   const handleDrawerOpen = () => {
     setOpen(true);
@@ -137,34 +139,41 @@ export default function NavBar(props) {
       await dispatch(CHANGE_WEB_STATE(true));
       await dispatch(ABOUT_STATE(false));
       await window.scrollBy({ left: 0, top: 800, behavior: "smooth" });
+      history.push("/");
       return;
     }
     if (changePhotoState === true) {
       dispatch(CHANGE_PHOTO_STATE(false));
       dispatch(CHANGE_WEB_STATE(true));
+      history.push("/");
       return;
       // } if (changeWebState === true)
     } else {
       dispatch(RESET());
+      history.push("/");
     }
   };
   const clickPhoto = () => {
     if (changeWebState === false) {
       dispatch(CHANGE_PHOTO_STATE(true));
       dispatch(ABOUT_STATE(false));
+      history.push("/photography");
       return;
     }
     if (changeWebState === true) {
       dispatch(CHANGE_PHOTO_STATE(true));
       dispatch(CHANGE_WEB_STATE(false));
+      history.push("/photography");
       return;
     } else {
       dispatch(RESET());
+      history.push("/photography");
     }
   };
   const clickAbout = async () => {
     await window.scrollBy({ left: 0, top: -5000, behavior: "smooth" });
     await dispatch(RESET());
+    history.push("/");
   };
 
   const colorChange = {
@@ -347,6 +356,7 @@ export default function NavBar(props) {
 
         <Switch>
           <Route exact path='/' component={Home} />
+          <Route exact path='/photography' component={Photography} />
           <Route exact path='/event' component={Event} />
           <Route exact path='/portrait' component={Portrait} />
           <Route exact path='/street' component={Street} />

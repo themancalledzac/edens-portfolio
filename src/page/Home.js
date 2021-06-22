@@ -1,7 +1,7 @@
 import { Container, Grid, makeStyles } from "@material-ui/core";
 import React from "react";
 import colors from "../components/colors";
-import PhotoHome from "../components/PhotoHome";
+// import PhotoHome from "../components/PhotoHome";
 import WebDevHome from "../components/WebDevHome/WebDevHome";
 import { useSelector } from "react-redux";
 import HeaderCard from "../components/HeaderCard";
@@ -61,7 +61,7 @@ const Home = () => {
           : ""}
         {/*<AboutMe /> */}
         <Grid container spacing={3}>
-          {changePhotoState ? <PhotoHome color={colors.blue} /> : ""}
+          {/* {changePhotoState ? <PhotoHome color={colors.blue} /> : ""} */}
           {changeWebState ? <WebDevHome /> : ""}
         </Grid>
       </Container>
