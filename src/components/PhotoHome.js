@@ -8,7 +8,8 @@ import eventImage from "../assets/photography/event/Header1.jpg";
 import landscapeImage from "../assets/photography/landscape/Header1.jpg";
 import portraitImage from "../assets/photography/portrait/Header1.jpg";
 import streetImage from "../assets/photography/street/Header1.jpg";
-import { white } from "kleur";
+import photoPageData from "../utils/photoPageData";
+import PhotoCard from "./PhotoCard";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -17,7 +18,7 @@ const useStyles = makeStyles((theme) => ({
   paper: {
     padding: theme.spacing(2),
     textAlign: "center",
-    height: "10rem",
+    height: "20rem",
     width: "100%",
     color: theme.palette.text.secondary,
   },
@@ -27,82 +28,13 @@ const useStyles = makeStyles((theme) => ({
     color: colors.white,
     backgroundColor: colors.blue,
   },
-  event: {
-    padding: theme.spacing(3),
-    backgroundImage: `url(${eventImage})`,
-    backgroundPosition: "center",
-    textAlign: "center",
-    color: "white",
-    backgroundSize: "cover",
-    backgroundRepeat: "no-repeat",
-    height: "10rem",
-    width: "100%",
-    "&:hover, &:focus": {
-      opacity: "75%",
-      cursor: "pointer",
-    },
+  phoneNumber: {
+    textDecoration: "none",
+    color: "inherit",
   },
-  landscape: {
-    padding: theme.spacing(3),
-    backgroundImage: `url(${landscapeImage})`,
-    backgroundPosition: "center",
+  infos: {
     textAlign: "center",
-    position: "relative",
-    color: "colors.white",
-    backgroundSize: "cover",
-    backgroundRepeat: "no-repeat",
-    height: "10rem",
-    width: "100%",
-    "&:hover, &:focus": {
-      opacity: "75%",
-      cursor: "pointer",
-    },
-  },
-  portrait: {
-    padding: theme.spacing(3),
-    backgroundImage: `url(${portraitImage})`,
-    backgroundPosition: "center",
-    textAlign: "center",
-    position: "relative",
-    color: "colors.white",
-    backgroundSize: "cover",
-    backgroundRepeat: "no-repeat",
-    height: "10rem",
-    width: "100%",
-    "&:hover, &:focus": {
-      opacity: "75%",
-      cursor: "pointer",
-    },
-  },
-  street: {
-    padding: theme.spacing(3),
-    backgroundImage: `url(${streetImage})`,
-    backgroundPosition: "center",
-    textAlign: "center",
-    position: "relative",
-    color: "colors.white",
-    backgroundSize: "cover",
-    backgroundRepeat: "no-repeat",
-    height: "10rem",
-    width: "100%",
-    "&:hover, &:focus": {
-      opacity: "75%",
-      cursor: "pointer",
-    },
-  },
-  text: {
-    textAlign: "center",
-    width: "85%",
-    opacity: "70%",
-    backgroundColor: "white",
-    margin: "0 auto",
-    color: "black",
-    position: "relative",
-    left: "0",
-    right: "0",
-    fontSize: "4rem",
-    overflow: "hidden",
-    // mixBlendMode: "screen",
+    padding: "2rem",
   },
 }));
 // <Grid item xs={12} sm={state.home.photo.gridWidth}>
@@ -123,27 +55,20 @@ export default function PhotoHome(props) {
               Photography
             </Button>
           </Grid>
-
-          <Grid item xs={12} sm={6}>
-            <Paper className={(classes.paper, classes.event)}>
-              <h2 className={classes.text}>Event</h2>
+          <Grid item xs={12}>
+            <Paper className={classes.infos}>
+              <h2>For inquiries:</h2>
+              <a className={classes.phoneNumber} href='tel:+1-503-475-8785'>
+                503.475.8785
+              </a>
+              <h4>edens.zac@gmail.com</h4>
             </Paper>
           </Grid>
-          <Grid item xs={12} sm={6}>
-            <Paper className={(classes.paper, classes.portrait)}>
-              <h2 className={classes.text}>Portrait</h2>
-            </Paper>
-          </Grid>
-          <Grid item xs={12} sm={6}>
-            <Paper className={(classes.paper, classes.street)}>
-              <h2 className={classes.text}>Street</h2>
-            </Paper>
-          </Grid>
-          <Grid item xs={12} sm={6}>
-            <Paper className={(classes.paper, classes.landscape)}>
-              <h2 className={classes.text}>Nature</h2>
-            </Paper>
-          </Grid>
+          {photoPageData.map(({ title, image }) => (
+            <Grid key={title} item xs={12} sm={6}>
+              <PhotoCard key={title} title={title} image={image}></PhotoCard>
+            </Grid>
+          ))}
         </Grid>
       </div>
     </Grid>
