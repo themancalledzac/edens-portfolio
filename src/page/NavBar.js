@@ -41,6 +41,7 @@ import {
   CHANGE_PHOTO_STATE,
   RESET,
   ABOUT_STATE,
+  PHOTO_PAGE_STATE,
 } from "../utils/actions";
 
 const drawerWidth = 200;
@@ -123,6 +124,9 @@ export default function NavBar(props) {
   const [open, setOpen] = React.useState(false);
   const changeWebState = useSelector((state) => state.changeWebState);
   const changePhotoState = useSelector((state) => state.changePhotoState);
+  const changePhotoPageState = useSelector(
+    (state) => state.changePhotoPageState
+  );
   const history = useHistory();
 
   const handleDrawerOpen = () => {
@@ -141,8 +145,7 @@ export default function NavBar(props) {
       await window.scrollBy({ left: 0, top: 800, behavior: "smooth" });
       history.push("/");
       return;
-    }
-    if (changePhotoState === true) {
+    } else if (changePhotoState === true) {
       dispatch(CHANGE_PHOTO_STATE(false));
       dispatch(CHANGE_WEB_STATE(true));
       history.push("/");
@@ -153,21 +156,25 @@ export default function NavBar(props) {
       history.push("/");
     }
   };
-  const clickPhoto = () => {
-    if (changeWebState === false) {
-      dispatch(CHANGE_PHOTO_STATE(true));
-      dispatch(ABOUT_STATE(false));
+  const clickPhoto = async () => {
+    if (changePhotoState === false) {
+      await dispatch(CHANGE_PHOTO_STATE(true));
+      await dispatch(ABOUT_STATE(false));
+      if (changeWebState === true) {
+        await dispatch(CHANGE_WEB_STATE(false));
+      }
       history.push("/photography");
       return;
-    }
-    if (changeWebState === true) {
-      dispatch(CHANGE_PHOTO_STATE(true));
-      dispatch(CHANGE_WEB_STATE(false));
+    } else if (changePhotoPageState === true) {
+      await dispatch(PHOTO_PAGE_STATE(false));
       history.push("/photography");
-      return;
-    } else {
+    } else if (changePhotoState === true) {
       dispatch(RESET());
-      history.push("/photography");
+      history.push("/");
+      return;
+    } else if (changePhotoPageState === true) {
+      dispatch(PHOTO_PAGE_STATE(false));
+      dispatch();
     }
   };
   const clickAbout = async () => {

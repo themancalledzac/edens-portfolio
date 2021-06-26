@@ -35,8 +35,8 @@ const useStyles = makeStyles((theme) => ({
 }));
 // <Grid item xs={12} sm={state.home.photo.gridWidth}>
 
-export default function Photography(props) {
-  const classes = useStyles(props);
+export default function Photography() {
+  const classes = useStyles();
 
   return (
     <div className={classes.root}>

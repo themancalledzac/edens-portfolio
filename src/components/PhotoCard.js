@@ -7,6 +7,8 @@ import {
   Typography,
 } from "@material-ui/core";
 import { useHistory } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import { PHOTO_PAGE_STATE } from "../utils/actions";
 
 const useStyles = makeStyles(() => ({
   header: {
@@ -28,8 +30,13 @@ const useStyles = makeStyles(() => ({
 
 const PhotoCard = ({ title, image, nav }) => {
   const history = useHistory();
+  const dispatch = useDispatch();
+  const changePhotoPageState = useSelector(
+    (state) => state.changePhotoPageState
+  );
   const handleClick = async () => {
     const name = { nav };
+    dispatch(PHOTO_PAGE_STATE(true));
     history.push(name.nav, "_blank");
   };
   const classes = useStyles();

@@ -7,6 +7,7 @@ import headerParagraph from "./headerParagraph";
 import headerTitle from "./headerTitle";
 import headerImage from "./headerImage";
 import changeAboutState from "./changeAboutState";
+import changePhotoPageState from "./changePhotoPageState";
 
 // import changeWidth from "./changeWidth";
 
@@ -19,6 +20,7 @@ const allReducer = combineReducers({
   headerTitle,
   headerImage,
   changeAboutState,
+  changePhotoPageState,
 });
 
 export default allReducer;

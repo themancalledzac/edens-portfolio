@@ -55,6 +55,11 @@ export const ABOUT_STATE = () => {
     type: "ABOUT_STATE",
   };
 };
+export const PHOTO_PAGE_STATE = () => {
+  return {
+    type: "PHOTO_PAGE_STATE",
+  };
+};
 export const RESET = () => {
   return {
     type: "RESET",
