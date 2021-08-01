@@ -43,6 +43,7 @@ import {
   ABOUT_STATE,
   PHOTO_PAGE_STATE,
 } from "../utils/actions";
+import changeAboutState from "../utils/reducers/changeAboutState";
 
 const drawerWidth = 200;
 
@@ -143,43 +144,34 @@ export default function NavBar(props) {
   };
   const dispatch = useDispatch();
 
-  const clickWeb = async () => {
-    if (changePhotoState === false) {
-      await dispatch(CHANGE_WEB_STATE(true));
-      await dispatch(ABOUT_STATE(false));
-      await window.scrollBy({ left: 0, top: 800, behavior: "smooth" });
-      history.push("/");
-      return;
-    } else if (changePhotoState === true) {
-      dispatch(CHANGE_PHOTO_STATE(false));
-      dispatch(CHANGE_WEB_STATE(true));
-      history.push("/");
-      return;
-      // } if (changeWebState === true)
+  const changeToFalse = async (change, state) => {
+    if (change === true) {
+      await dispatch(state(false));
     } else {
+      await dispatch(ABOUT_STATE());
+    }
+  };
+
+  const clickWeb = async () => {
+    if (changeWebState === false) {
+      changeToFalse(changePhotoState, CHANGE_PHOTO_STATE);
+      await dispatch(CHANGE_WEB_STATE(true));
+      await window.scrollBy({ left: 0, top: 600, behavior: "smooth" });
+      history.push("/");
+      return;
+    } else if (changeWebState === true) {
       dispatch(RESET());
       history.push("/");
     }
   };
   const clickPhoto = async () => {
     if (changePhotoState === false) {
+      changeToFalse(changeWebState, CHANGE_WEB_STATE);
       await dispatch(CHANGE_PHOTO_STATE(true));
-      await dispatch(ABOUT_STATE(false));
-      if (changeWebState === true) {
-        await dispatch(CHANGE_WEB_STATE(false));
-      }
-      history.push("/photography");
-      return;
-    } else if (changePhotoPageState === true) {
-      await dispatch(PHOTO_PAGE_STATE(false));
       history.push("/photography");
     } else if (changePhotoState === true) {
       dispatch(RESET());
       history.push("/");
-      return;
-    } else if (changePhotoPageState === true) {
-      dispatch(PHOTO_PAGE_STATE(false));
-      dispatch();
     }
   };
   const clickAbout = async () => {
