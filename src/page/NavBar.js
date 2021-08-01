@@ -98,6 +98,11 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.up("sm")]: {
       width: theme.spacing(8) + 1,
     },
+    [theme.breakpoints.down("xs")]: {
+      width: theme.spacing(8) + 1,
+
+      display: "none",
+    },
   },
   toolbar: {
     display: "flex",
@@ -109,7 +114,7 @@ const useStyles = makeStyles((theme) => ({
   },
   content: {
     flexGrow: 1,
-    padding: theme.spacing(3),
+    padding: theme.spacing(0),
   },
   logo: {
     color: colors.white,

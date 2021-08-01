@@ -51,7 +51,6 @@ const useStyles = makeStyles((theme) => ({
   },
 
   logoContainer: {
-    maxWidth: "85%",
     marginBottom: "30px",
     [theme.breakpoints.up("md")]: {
       marginTop: "60px",

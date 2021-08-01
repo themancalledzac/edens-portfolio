@@ -4,7 +4,6 @@ import LogoContainerSingle from "./LogoContainerSingle";
 
 const useStyles = makeStyles((theme) => ({
   logoContainer: {
-    maxWidth: "85%",
     marginBottom: "30px",
     [theme.breakpoints.up("md")]: {
       marginTop: "45px",
@@ -23,14 +22,14 @@ const LogoContainer = ({ techOne, techTwo, techThree, techFour }) => {
   return (
     <Container className={classes.logoContainer}>
       <Grid container spacing={3}>
-        <Grid item xs={12} sm={6}>
-          <Grid container spacing={2}>
+        <Grid item xs={6} sm={6}>
+          <Grid container spacing={1}>
             <LogoContainerSingle tech={techOne} />
             <LogoContainerSingle tech={techTwo} />
           </Grid>
         </Grid>
-        <Grid item xs={12} sm={6}>
-          <Grid container spacing={2}>
+        <Grid item xs={6} sm={6}>
+          <Grid container spacing={1}>
             <LogoContainerSingle tech={techThree} />
             <LogoContainerSingle tech={techFour} />
           </Grid>

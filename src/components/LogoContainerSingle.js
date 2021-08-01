@@ -3,7 +3,7 @@ import React from "react";
 
 const useStyles = makeStyles((theme) => ({
   logoContainer: {
-    maxWidth: "85%",
+    maxWidth: "95%",
     marginBottom: "30px",
     [theme.breakpoints.up("md")]: {
       marginTop: "60px",
@@ -17,14 +17,11 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-
-
 const LogoContainerSingle = ({ tech }) => {
-  
   const classes = useStyles();
   return (
     <Grid item className={classes.logo} xs={12} sm={12} md={6}>
-      <Grid container spacing={2}>
+      <Grid container spacing={1}>
         {tech.map(({ name, logo, link }) => (
           <Grid
             key={name}
