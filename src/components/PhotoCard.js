@@ -20,7 +20,7 @@ const useStyles = makeStyles(() => ({
     textAlign: "center",
   },
   image: {
-    maxWidth: "95%",
+    maxWidth: "100%",
     border: "5px solid white",
     borderBottom: "15px solid white",
     borderTop: "15px solid white",

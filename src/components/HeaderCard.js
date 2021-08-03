@@ -60,7 +60,7 @@ const useStyles = makeStyles((theme) => ({
   headerParagraph: {
     marginBottom: "30px",
     marginTop: "30px",
-    minHeight: "250px",
+    // minHeight: "250px",
     [theme.breakpoints.down("xs")]: {
       height: "auto",
     },
@@ -79,7 +79,7 @@ const useStyles = makeStyles((theme) => ({
     borderTop: "1px solid black",
   },
   aboutContainer: {
-    minHeight: "444px",
+    // minHeight: "444px",
     [theme.breakpoints.down("xs")]: {
       paddingLeft: "0",
       paddingRight: "0",

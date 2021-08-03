@@ -25,8 +25,11 @@ const useStyles = makeStyles(() => ({
     },
   },
   image: {
-    maxWidth: "95%",
+    // maxWidth: "100%",
     border: "2px solid #404040",
+    display: "block",
+    marginLeft: "20px",
+    marginRight: "auto",
     // display: "flex",
     // alignItems: "center",
   },
@@ -66,12 +69,14 @@ const WebProject = ({
           >
             Github Link
           </Button>
-          <img
-            className={classes.image}
-            src={image01.src}
-            alt={image01.title}
-            onClick={() => window.open(`${link}`, "_blank")}
-          />
+          <div>
+            <img
+              className={classes.image}
+              src={image01.src}
+              alt={image01.title}
+              onClick={() => window.open(`${link}`, "_blank")}
+            />
+          </div>
           <p>{paragraph}</p>
           <br></br>
           <h3>Technologies used</h3>

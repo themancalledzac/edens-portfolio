@@ -20,6 +20,7 @@ const useStyles = makeStyles((theme) => ({
   },
   header: {
     padding: theme.spacing(2),
+    marginTop: "20px",
     textAlign: "center",
     color: colors.white,
     backgroundColor: colors.blue,

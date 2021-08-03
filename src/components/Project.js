@@ -23,7 +23,7 @@ const useStyles = makeStyles(() => ({
     },
   },
   image: {
-    maxWidth: "95%",
+    maxWidth: "100%",
     border: "2px solid #404040",
     // display: "flex",
     // alignItems: "center",
