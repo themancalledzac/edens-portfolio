@@ -25,6 +25,9 @@ const useStyles = makeStyles(() => ({
     borderBottom: "15px solid white",
     borderTop: "15px solid white",
     textAlign: "center",
+      "&:hover": {
+        cursor: "pointer",
+    }
   },
 }));
 
@@ -48,7 +51,7 @@ const PhotoCard = ({ title, image, nav }) => {
             <Button onClick={handleClick}>{title}</Button>
           </Typography>
           <hr></hr>
-          <img className={classes.image} src={image.src} alt={image.title} />
+          <img className={classes.image} onClick={handleClick} src={image.src} alt={image.title} />
         </Container>
       </Paper>
     </>
