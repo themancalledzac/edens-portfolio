@@ -25,9 +25,9 @@ const useStyles = makeStyles(() => ({
     borderBottom: "15px solid white",
     borderTop: "15px solid white",
     textAlign: "center",
-      "&:hover": {
-        cursor: "pointer",
-    }
+    "&:hover": {
+      cursor: "pointer",
+    },
   },
 }));
 
@@ -40,6 +40,11 @@ const PhotoCard = ({ title, image, nav }) => {
   const handleClick = async () => {
     const name = { nav };
     dispatch(PHOTO_PAGE_STATE(true));
+    window.scroll({
+      top: 0,
+      left: 0,
+      behavior: "smooth",
+    });
     history.push(name.nav, "_blank");
   };
   const classes = useStyles();
@@ -51,7 +56,12 @@ const PhotoCard = ({ title, image, nav }) => {
             <Button onClick={handleClick}>{title}</Button>
           </Typography>
           <hr></hr>
-          <img className={classes.image} onClick={handleClick} src={image.src} alt={image.title} />
+          <img
+            className={classes.image}
+            onClick={handleClick}
+            src={image.src}
+            alt={image.title}
+          />
         </Container>
       </Paper>
     </>

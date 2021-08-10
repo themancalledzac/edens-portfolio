@@ -5,7 +5,7 @@ const photoPageData = [
       src: require("../assets/photography/event/Header1.jpg").default,
       title: "Event photography page.",
     },
-    nav: "/event",
+    nav: "/photography/event",
   },
   {
     title: "Portrait",
@@ -13,7 +13,7 @@ const photoPageData = [
       src: require("../assets/photography/portrait/Header1.jpg").default,
       title: "Portrait photography page.",
     },
-    nav: "/portrait",
+    nav: "/photography/portrait",
   },
   {
     title: "Street",
@@ -21,7 +21,7 @@ const photoPageData = [
       src: require("../assets/photography/street/Header1.jpg").default,
       title: "Street photography page.",
     },
-    nav: "/street",
+    nav: "/photography/street",
   },
   {
     title: "Nature",
@@ -29,7 +29,7 @@ const photoPageData = [
       src: require("../assets/photography/landscape/Header1.jpg").default,
       title: "Nature and Landscape photography page.",
     },
-    nav: "/landscape",
+    nav: "/photography/landscape",
   },
 ];
 

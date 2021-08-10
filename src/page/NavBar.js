@@ -361,10 +361,10 @@ export default function NavBar(props) {
         <Switch>
           <Route exact path='/' component={Home} />
           <Route exact path='/photography' component={Photography} />
-          <Route exact path='/event' component={Event} />
-          <Route exact path='/portrait' component={Portrait} />
-          <Route exact path='/street' component={Street} />
-          <Route exact path='/landscape' component={Landscape} />
+          <Route exact path='/photography/event' component={Event} />
+          <Route exact path='/photography/portrait' component={Portrait} />
+          <Route exact path='/photography/street' component={Street} />
+          <Route exact path='/photography/landscape' component={Landscape} />
         </Switch>
       </main>
     </div>
