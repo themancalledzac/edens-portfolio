@@ -60,6 +60,11 @@ export const PHOTO_PAGE_STATE = () => {
     type: "PHOTO_PAGE_STATE",
   };
 };
+export const CHANGE_COLOR_STATE = () => {
+  return {
+    type: "CHANGE_COLOR_STATE",
+  };
+};
 export const RESET = () => {
   return {
     type: "RESET",

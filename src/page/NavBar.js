@@ -42,6 +42,7 @@ import {
   RESET,
   ABOUT_STATE,
   PHOTO_PAGE_STATE,
+  CHANGE_COLOR_STATE,
 } from "../utils/actions";
 import changeAboutState from "../utils/reducers/changeAboutState";
 
@@ -130,6 +131,7 @@ export default function NavBar(props) {
   const [open, setOpen] = React.useState(false);
   const changeWebState = useSelector((state) => state.changeWebState);
   const changePhotoState = useSelector((state) => state.changePhotoState);
+  const changeColorState = useSelector((state) => state.changeColorState);
   const changePhotoPageState = useSelector(
     (state) => state.changePhotoPageState
   );
@@ -156,6 +158,9 @@ export default function NavBar(props) {
     if (changeWebState === false) {
       changeToFalse(changePhotoState, CHANGE_PHOTO_STATE);
       await dispatch(CHANGE_WEB_STATE(true));
+      if (changeColorState === true) {
+        await dispatch(CHANGE_COLOR_STATE());
+      }
       await window.scrollBy({ left: 0, top: 600, behavior: "smooth" });
       history.push("/");
       return;
@@ -168,6 +173,9 @@ export default function NavBar(props) {
     if (changePhotoState === false) {
       changeToFalse(changeWebState, CHANGE_WEB_STATE);
       await dispatch(CHANGE_PHOTO_STATE(true));
+      if (changeColorState === false) {
+        await dispatch(CHANGE_COLOR_STATE());
+      }
       history.push("/photography");
     } else if (changePhotoState === true) {
       dispatch(RESET());

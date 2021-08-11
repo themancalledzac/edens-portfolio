@@ -8,7 +8,11 @@ import {
 } from "@material-ui/core";
 import { useHistory } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import { PHOTO_PAGE_STATE } from "../utils/actions";
+import {
+  PHOTO_PAGE_STATE,
+  CHANGE_PHOTO_STATE,
+  CHANGE_COLOR_STATE,
+} from "../utils/actions";
 
 const useStyles = makeStyles(() => ({
   header: {
@@ -39,7 +43,8 @@ const PhotoCard = ({ title, image, nav }) => {
   );
   const handleClick = async () => {
     const name = { nav };
-    dispatch(PHOTO_PAGE_STATE(true));
+    await dispatch(CHANGE_PHOTO_STATE(false));
+    await dispatch(PHOTO_PAGE_STATE(true));
     window.scroll({
       top: 0,
       left: 0,

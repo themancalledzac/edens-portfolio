@@ -8,6 +8,7 @@ import headerTitle from "./headerTitle";
 import headerImage from "./headerImage";
 import changeAboutState from "./changeAboutState";
 import changePhotoPageState from "./changePhotoPageState";
+import changeColorState from "./changeColorState";
 
 // import changeWidth from "./changeWidth";
 
@@ -21,6 +22,7 @@ const allReducer = combineReducers({
   headerImage,
   changeAboutState,
   changePhotoPageState,
+  changeColorState,
 });
 
 export default allReducer;

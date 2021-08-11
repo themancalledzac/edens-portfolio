@@ -5,11 +5,11 @@ import { useSelector } from "react-redux";
 import colors from "./components/colors";
 
 function App() {
-  const changePhotoState = useSelector((state) => state.changePhotoState);
+  const changeColorState = useSelector((state) => state.changeColorState);
 
   return (
     <Router>
-      {changePhotoState ? (
+      {changeColorState ? (
         <NavBar color={colors.blue} />
       ) : (
         <NavBar color={colors.orange} />
