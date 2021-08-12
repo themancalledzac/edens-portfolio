@@ -13,13 +13,14 @@ const useStyles = makeStyles(() => ({
     flexGrow: 1,
   },
   title: {
-    height: "3rem",
     textAlign: "center",
-    paddingTop: "1rem",
     padding: "0, 2rem",
+    marginTop: "0",
+    paddingTop: "0",
   },
   image: {
     maxWidth: "100%",
+    maxHeight: "1000px",
     border: "5px solid white",
     borderBottom: "15px solid white",
     borderTop: "15px solid white",
@@ -28,14 +29,17 @@ const useStyles = makeStyles(() => ({
     marginRight: "auto",
     display: "block",
   },
-  description: {},
+  container: {
+    paddingLeft: "0",
+    paddingRight: "0",
+  },
 }));
 
 const PhotoPageCard = ({ key, title, image }) => {
   const classes = useStyles();
   return (
     <div className={classes.root}>
-      <Container maxWidth='lg'>
+      <Container className={classes.container} maxWidth='lg'>
         <Grid container spacing={3}>
           <Grid item xs={12}>
             <h1 className={classes.title}>{title}</h1>

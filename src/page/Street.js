@@ -3,7 +3,7 @@ import React from "react";
 const Street = () => {
   return (
     <div>
-      <p>Street</p>
+      <p>Under Construction!</p>
     </div>
   );
 };

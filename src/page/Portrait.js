@@ -3,7 +3,7 @@ import React from "react";
 const Portrait = () => {
   return (
     <div>
-      <p>Portrait</p>
+      <p>Under Construction!</p>
     </div>
   );
 };

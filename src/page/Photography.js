@@ -33,6 +33,11 @@ const useStyles = makeStyles((theme) => ({
     textAlign: "center",
     padding: "2rem",
   },
+  email: {
+    "&:hover": {
+      cursor: "pointer",
+    },
+  },
 }));
 // <Grid item xs={12} sm={state.home.photo.gridWidth}>
 
@@ -64,7 +69,17 @@ export default function Photography() {
                     >
                       503.475.8785
                     </a>
-                    <h4>edens.zac@gmail.com</h4>
+                    <h4
+                      className={classes.email}
+                      onClick={() =>
+                        window.open(
+                          "https://mail.google.com/mail/?view=cm&fs=1&to=edens.zac@gmail.com",
+                          "_blank"
+                        )
+                      }
+                    >
+                      edens.zac@gmail.com
+                    </h4>
                   </Paper>
                 </Grid>
                 {photoPageData.map(({ title, image, nav }) => (

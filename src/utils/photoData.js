@@ -150,43 +150,58 @@ const PhotoData = [
     headerImageTitle: "Landscape Photography",
     images: [
       {
-        src: require("../assets/photography/landscape/Header1.jpg").default,
+        src: require("../assets/photography/landscape/DSC_0009.jpg").default,
         title: "landscape1",
       },
       {
-        src: require("../assets/photography/landscape/Header1.jpg").default,
+        src: require("../assets/photography/landscape/DSC_0028-Edit.jpg")
+          .default,
         title: "landscape2",
       },
       {
-        src: require("../assets/photography/landscape/Header1.jpg").default,
+        src: require("../assets/photography/landscape/DSC_0387-Pano.jpg")
+          .default,
         title: "landscape3",
       },
       {
-        src: require("../assets/photography/landscape/Header1.jpg").default,
+        src: require("../assets/photography/landscape/DSC_0487.jpg").default,
         title: "landscape3",
       },
       {
-        src: require("../assets/photography/landscape/Header1.jpg").default,
+        src: require("../assets/photography/landscape/DSC_0547.jpg").default,
         title: "landscape4",
       },
       {
-        src: require("../assets/photography/landscape/Header1.jpg").default,
+        src: require("../assets/photography/landscape/DSC_0618.jpg").default,
         title: "landscape5",
       },
       {
-        src: require("../assets/photography/landscape/Header1.jpg").default,
+        src: require("../assets/photography/landscape/DSC_0667.jpg").default,
         title: "landscape6",
       },
       {
-        src: require("../assets/photography/landscape/Header1.jpg").default,
+        src: require("../assets/photography/landscape/DSC_0682.jpg").default,
         title: "landscape7",
       },
       {
-        src: require("../assets/photography/landscape/Header1.jpg").default,
+        src: require("../assets/photography/landscape/DSC_0874.jpg").default,
         title: "landscape8",
       },
       {
-        src: require("../assets/photography/landscape/Header1.jpg").default,
+        src: require("../assets/photography/landscape/DSC_0997-Edit.jpg")
+          .default,
+        title: "landscape9",
+      },
+      {
+        src: require("../assets/photography/landscape/DSC_0998.jpg").default,
+        title: "landscape9",
+      },
+      {
+        src: require("../assets/photography/landscape/DSC_1226.jpg").default,
+        title: "landscape9",
+      },
+      {
+        src: require("../assets/photography/landscape/DSC_1485.jpg").default,
         title: "landscape9",
       },
     ],
