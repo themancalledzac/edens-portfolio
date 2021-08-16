@@ -216,7 +216,12 @@ export default function NavBar(props) {
           >
             <MenuIcon color='inherit' />
           </IconButton>
-          <Typography variant='h6' noWrap style={{ marginRight: "2rem" }}>
+          <Typography
+            onClick={clickAbout}
+            variant='h6'
+            noWrap
+            style={{ marginRight: "2rem" }}
+          >
             Zac Edens Portfolio
           </Typography>
         </Toolbar>
