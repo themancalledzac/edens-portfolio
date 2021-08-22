@@ -1,17 +1,16 @@
 import {
   Button,
   Container,
-  Link,
   makeStyles,
   Paper,
   Typography,
 } from "@material-ui/core";
 import { useHistory } from "react-router-dom";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import {
   PHOTO_PAGE_STATE,
   CHANGE_PHOTO_STATE,
-  CHANGE_COLOR_STATE,
+  // CHANGE_COLOR_STATE,
 } from "../utils/actions";
 
 const useStyles = makeStyles(() => ({
@@ -38,9 +37,9 @@ const useStyles = makeStyles(() => ({
 const PhotoCard = ({ title, image, nav }) => {
   const history = useHistory();
   const dispatch = useDispatch();
-  const changePhotoPageState = useSelector(
-    (state) => state.changePhotoPageState
-  );
+  // const changePhotoPageState = useSelector(
+  //   (state) => state.changePhotoPageState
+  // );
   const handleClick = async () => {
     const name = { nav };
     await dispatch(CHANGE_PHOTO_STATE(false));

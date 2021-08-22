@@ -1,10 +1,8 @@
-import React, { useCallback, useState } from "react";
+import React from "react";
 import { Button, Container, Grid, makeStyles, Paper } from "@material-ui/core";
 import colors from "../components/colors";
-import photoData from "../utils/photoData";
 import PhotoPageCard from "../components/PhotoPageCard";
 import useToggle from "../utils/useToggle";
-const landscapePhotoData = photoData[3];
 
 const useStyles = makeStyles((theme) => ({
   root: {

@@ -1,12 +1,5 @@
-import {
-  Button,
-  Grid,
-  Paper,
-  Container,
-  Link,
-  makeStyles,
-} from "@material-ui/core";
-import { useHistory } from "react-router-dom";
+import { Grid, Container, makeStyles } from "@material-ui/core";
+// import { useHistory } from "react-router-dom";
 import colors from "./colors";
 
 const useStyles = makeStyles(() => ({
@@ -47,7 +40,7 @@ const useStyles = makeStyles(() => ({
 const PhotoPageCard = ({ key, title, image, description }) => {
   const classes = useStyles();
   return (
-    <div className={classes.root}>
+    <div key={key} className={classes.root}>
       <Container className={classes.container} maxWidth='lg'>
         <Grid container spacing={3}>
           <Grid item xs={12}>

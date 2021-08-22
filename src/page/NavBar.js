@@ -41,10 +41,10 @@ import {
   CHANGE_PHOTO_STATE,
   RESET,
   ABOUT_STATE,
-  PHOTO_PAGE_STATE,
+  // PHOTO_PAGE_STATE,
   CHANGE_COLOR_STATE,
 } from "../utils/actions";
-import changeAboutState from "../utils/reducers/changeAboutState";
+// import changeAboutState from "../utils/reducers/changeAboutState";
 
 const drawerWidth = 200;
 
@@ -132,9 +132,9 @@ export default function NavBar(props) {
   const changeWebState = useSelector((state) => state.changeWebState);
   const changePhotoState = useSelector((state) => state.changePhotoState);
   const changeColorState = useSelector((state) => state.changeColorState);
-  const changePhotoPageState = useSelector(
-    (state) => state.changePhotoPageState
-  );
+  // const changePhotoPageState = useSelector(
+  //   (state) => state.changePhotoPageState
+  // );
   const history = useHistory();
 
   const handleDrawerOpen = () => {
