@@ -1,10 +1,16 @@
-import React from "react";
+import React, { useCallback, useState } from "react";
+
+import photoData from "../utils/photoData";
+
+import PhotoPage from "../components/PhotoPages";
+const title = photoData[2].title;
+
+const photos = photoData[2].images;
+const paragraph = photoData[2].paragraph;
 
 const Street = () => {
   return (
-    <div>
-      <p>Under Construction!</p>
-    </div>
+    <PhotoPage title={title} photos={photos} paragraph={paragraph}></PhotoPage>
   );
 };
 

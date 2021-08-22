@@ -4,144 +4,234 @@ const PhotoData = [
     paragraph: "Professional corporate photography work.",
     headerImage: require("../assets/photography/event/Header1.jpg").default,
     headerImageTitle: "Corporate Photography",
-    // images: [
-    //   {
-    //     src: require("../assets/").default,
-    //     title: "corporate1",
-    //   },
-    //   {
-    //     src: require("../assets/").default,
-    //     title: "corporate1",
-    //   },
-    //   {
-    //     src: require("../assets/").default,
-    //     title: "corporate1",
-    //   },
-    //   {
-    //     src: require("../assets/").default,
-    //     title: "corporate1",
-    //   },
-    //   {
-    //     src: require("../assets/").default,
-    //     title: "corporate1",
-    //   },
-    //   {
-    //     src: require("../assets/").default,
-    //     title: "corporate1",
-    //   },
-    //   {
-    //     src: require("../assets/").default,
-    //     title: "corporate1",
-    //   },
-    //   {
-    //     src: require("../assets/").default,
-    //     title: "corporate1",
-    //   },
-    //   {
-    //     src: require("../assets/").default,
-    //     title: "corporate1",
-    //   },
-    //   {
-    //     src: require("../assets/").default,
-    //     title: "corporate1",
-    //   },
-    // ],
+    images: [
+      {
+        src: require("../assets/photography/event/Header1.jpg").default,
+        title: "corporate1",
+        description:
+          "Sunset in the Badlands, I found a nice high overlook over the Norbeck Pass.",
+        tags: ["Outdoor", "Moab", "Big Sky", "Enchantments", "etc"],
+      },
+      {
+        src: require("../assets/photography/event/Header1.jpg").default,
+        title: "corporate1",
+        description:
+          "Sunset in the Badlands, I found a nice high overlook over the Norbeck Pass.",
+        tags: ["Outdoor", "Moab", "Big Sky", "Enchantments", "etc"],
+      },
+      {
+        src: require("../assets/photography/event/Header1.jpg").default,
+        title: "corporate1",
+        description:
+          "Sunset in the Badlands, I found a nice high overlook over the Norbeck Pass.",
+        tags: ["Outdoor", "Moab", "Big Sky", "Enchantments", "etc"],
+      },
+      {
+        src: require("../assets/photography/event/Header1.jpg").default,
+        title: "corporate1",
+        description:
+          "Sunset in the Badlands, I found a nice high overlook over the Norbeck Pass.",
+        tags: ["Outdoor", "Moab", "Big Sky", "Enchantments", "etc"],
+      },
+      {
+        src: require("../assets/photography/event/Header1.jpg").default,
+        title: "corporate1",
+        description:
+          "Sunset in the Badlands, I found a nice high overlook over the Norbeck Pass.",
+        tags: ["Outdoor", "Moab", "Big Sky", "Enchantments", "etc"],
+      },
+      {
+        src: require("../assets/photography/event/Header1.jpg").default,
+        title: "corporate1",
+        description:
+          "Sunset in the Badlands, I found a nice high overlook over the Norbeck Pass.",
+        tags: ["Outdoor", "Moab", "Big Sky", "Enchantments", "etc"],
+      },
+      {
+        src: require("../assets/photography/event/Header1.jpg").default,
+        title: "corporate1",
+        description:
+          "Sunset in the Badlands, I found a nice high overlook over the Norbeck Pass.",
+        tags: ["Outdoor", "Moab", "Big Sky", "Enchantments", "etc"],
+      },
+      {
+        src: require("../assets/photography/event/Header1.jpg").default,
+        title: "corporate1",
+        description:
+          "Sunset in the Badlands, I found a nice high overlook over the Norbeck Pass.",
+        tags: ["Outdoor", "Moab", "Big Sky", "Enchantments", "etc"],
+      },
+      {
+        src: require("../assets/photography/event/Header1.jpg").default,
+        title: "corporate1",
+        description:
+          "Sunset in the Badlands, I found a nice high overlook over the Norbeck Pass.",
+        tags: ["Outdoor", "Moab", "Big Sky", "Enchantments", "etc"],
+      },
+      {
+        src: require("../assets/photography/event/Header1.jpg").default,
+        title: "corporate1",
+        description:
+          "Sunset in the Badlands, I found a nice high overlook over the Norbeck Pass.",
+        tags: ["Outdoor", "Moab", "Big Sky", "Enchantments", "etc"],
+      },
+    ],
   },
   {
     title: "Portrait Photography",
     paragraph: "Professional portrait photography work.",
     headerImage: require("../assets/photography/portrait/Header1.jpg").default,
     headerImageTitle: "Portrait Photography",
-    // images: [
-    //   {
-    //     src: require("../assets/").default,
-    //     title: "Portrait1",
-    //   },
-    //   {
-    //     src: require("../assets/").default,
-    //     title: "Portrait2",
-    //   },
-    //   {
-    //     src: require("../assets/").default,
-    //     title: "Portrait3",
-    //   },
-    //   {
-    //     src: require("../assets/").default,
-    //     title: "Portrait4",
-    //   },
-    //   {
-    //     src: require("../assets/").default,
-    //     title: "Portrait5",
-    //   },
-    //   {
-    //     src: require("../assets/").default,
-    //     title: "Portrait6",
-    //   },
-    //   {
-    //     src: require("../assets/").default,
-    //     title: "Portrait7",
-    //   },
-    //   {
-    //     src: require("../assets/").default,
-    //     title: "Portrait8",
-    //   },
-    //   {
-    //     src: require("../assets/").default,
-    //     title: "Portrait9",
-    //   },
-    //   {
-    //     src: require("../assets/").default,
-    //     title: "Portrait10",
-    //   },
-    // ],
+    images: [
+      {
+        src: require("../assets/photography/portrait/Header1.jpg").default,
+        title: "Portrait1",
+        description:
+          "Sunset in the Badlands, I found a nice high overlook over the Norbeck Pass.",
+        tags: ["Outdoor", "Moab", "Big Sky", "Enchantments", "etc"],
+      },
+      {
+        src: require("../assets/photography/portrait/Header1.jpg").default,
+        title: "Portrait2",
+        description:
+          "Sunset in the Badlands, I found a nice high overlook over the Norbeck Pass.",
+        tags: ["Outdoor", "Moab", "Big Sky", "Enchantments", "etc"],
+      },
+      {
+        src: require("../assets/photography/portrait/Header1.jpg").default,
+        title: "Portrait3",
+        description:
+          "Sunset in the Badlands, I found a nice high overlook over the Norbeck Pass.",
+        tags: ["Outdoor", "Moab", "Big Sky", "Enchantments", "etc"],
+      },
+      {
+        src: require("../assets/photography/portrait/Header1.jpg").default,
+        title: "Portrait4",
+        description:
+          "Sunset in the Badlands, I found a nice high overlook over the Norbeck Pass.",
+        tags: ["Outdoor", "Moab", "Big Sky", "Enchantments", "etc"],
+      },
+      {
+        src: require("../assets/photography/portrait/Header1.jpg").default,
+        title: "Portrait5",
+        description:
+          "Sunset in the Badlands, I found a nice high overlook over the Norbeck Pass.",
+        tags: ["Outdoor", "Moab", "Big Sky", "Enchantments", "etc"],
+      },
+      {
+        src: require("../assets/photography/portrait/Header1.jpg").default,
+        title: "Portrait6",
+        description:
+          "Sunset in the Badlands, I found a nice high overlook over the Norbeck Pass.",
+        tags: ["Outdoor", "Moab", "Big Sky", "Enchantments", "etc"],
+      },
+      {
+        src: require("../assets/photography/portrait/Header1.jpg").default,
+        title: "Portrait7",
+        description:
+          "Sunset in the Badlands, I found a nice high overlook over the Norbeck Pass.",
+        tags: ["Outdoor", "Moab", "Big Sky", "Enchantments", "etc"],
+      },
+      {
+        src: require("../assets/photography/portrait/Header1.jpg").default,
+        title: "Portrait8",
+        description:
+          "Sunset in the Badlands, I found a nice high overlook over the Norbeck Pass.",
+        tags: ["Outdoor", "Moab", "Big Sky", "Enchantments", "etc"],
+      },
+      {
+        src: require("../assets/photography/portrait/Header1.jpg").default,
+        title: "Portrait9",
+        description:
+          "Sunset in the Badlands, I found a nice high overlook over the Norbeck Pass.",
+        tags: ["Outdoor", "Moab", "Big Sky", "Enchantments", "etc"],
+      },
+      {
+        src: require("../assets/photography/portrait/Header1.jpg").default,
+        title: "Portrait10",
+        description:
+          "Sunset in the Badlands, I found a nice high overlook over the Norbeck Pass.",
+        tags: ["Outdoor", "Moab", "Big Sky", "Enchantments", "etc"],
+      },
+    ],
   },
   {
     title: "Street Photography",
     paragraph: "Street photography work.",
     headerImage: require("../assets/photography/street/Header1.jpg").default,
     headerImageTitle: "Street Photography",
-    // images: [
-    //   {
-    //     src: require("../assets/").default,
-    //     title: "corporate1",
-    //   },
-    //   {
-    //     src: require("../assets/").default,
-    //     title: "corporate1",
-    //   },
-    //   {
-    //     src: require("../assets/").default,
-    //     title: "corporate1",
-    //   },
-    //   {
-    //     src: require("../assets/").default,
-    //     title: "corporate1",
-    //   },
-    //   {
-    //     src: require("../assets/").default,
-    //     title: "corporate1",
-    //   },
-    //   {
-    //     src: require("../assets/").default,
-    //     title: "corporate1",
-    //   },
-    //   {
-    //     src: require("../assets/").default,
-    //     title: "corporate1",
-    //   },
-    //   {
-    //     src: require("../assets/").default,
-    //     title: "corporate1",
-    //   },
-    //   {
-    //     src: require("../assets/").default,
-    //     title: "corporate1",
-    //   },
-    //   {
-    //     src: require("../assets/").default,
-    //     title: "corporate1",
-    //   },
-    // ],
+    images: [
+      {
+        src: require("../assets/photography/street/Header1.jpg").default,
+        title: "corporate1",
+        description:
+          "Sunset in the Badlands, I found a nice high overlook over the Norbeck Pass.",
+        tags: ["Outdoor", "Moab", "Big Sky", "Enchantments", "etc"],
+      },
+      {
+        src: require("../assets/photography/street/Header1.jpg").default,
+        title: "corporate1",
+        description:
+          "Sunset in the Badlands, I found a nice high overlook over the Norbeck Pass.",
+        tags: ["Outdoor", "Moab", "Big Sky", "Enchantments", "etc"],
+      },
+      {
+        src: require("../assets/photography/street/Header1.jpg").default,
+        title: "corporate1",
+        description:
+          "Sunset in the Badlands, I found a nice high overlook over the Norbeck Pass.",
+        tags: ["Outdoor", "Moab", "Big Sky", "Enchantments", "etc"],
+      },
+      {
+        src: require("../assets/photography/street/Header1.jpg").default,
+        title: "corporate1",
+        description:
+          "Sunset in the Badlands, I found a nice high overlook over the Norbeck Pass.",
+        tags: ["Outdoor", "Moab", "Big Sky", "Enchantments", "etc"],
+      },
+      {
+        src: require("../assets/photography/street/Header1.jpg").default,
+        title: "corporate1",
+        description:
+          "Sunset in the Badlands, I found a nice high overlook over the Norbeck Pass.",
+        tags: ["Outdoor", "Moab", "Big Sky", "Enchantments", "etc"],
+      },
+      {
+        src: require("../assets/photography/street/Header1.jpg").default,
+        title: "corporate1",
+        description:
+          "Sunset in the Badlands, I found a nice high overlook over the Norbeck Pass.",
+        tags: ["Outdoor", "Moab", "Big Sky", "Enchantments", "etc"],
+      },
+      {
+        src: require("../assets/photography/street/Header1.jpg").default,
+        title: "corporate1",
+        description:
+          "Sunset in the Badlands, I found a nice high overlook over the Norbeck Pass.",
+        tags: ["Outdoor", "Moab", "Big Sky", "Enchantments", "etc"],
+      },
+      {
+        src: require("../assets/photography/street/Header1.jpg").default,
+        title: "corporate1",
+        description:
+          "Sunset in the Badlands, I found a nice high overlook over the Norbeck Pass.",
+        tags: ["Outdoor", "Moab", "Big Sky", "Enchantments", "etc"],
+      },
+      {
+        src: require("../assets/photography/street/Header1.jpg").default,
+        title: "corporate1",
+        description:
+          "Sunset in the Badlands, I found a nice high overlook over the Norbeck Pass.",
+        tags: ["Outdoor", "Moab", "Big Sky", "Enchantments", "etc"],
+      },
+      {
+        src: require("../assets/photography/street/Header1.jpg").default,
+        title: "corporate1",
+        description:
+          "Sunset in the Badlands, I found a nice high overlook over the Norbeck Pass.",
+        tags: ["Outdoor", "Moab", "Big Sky", "Enchantments", "etc"],
+      },
+    ],
   },
   {
     title: "Landscape Photography",
@@ -238,7 +328,7 @@ const PhotoData = [
         src: require("../assets/photography/landscape/DSC_1485.jpg").default,
         title: "Grand Canyon.",
         description:
-          "A long hike into the Grand Canyon with Vishnu Temple rising above the Colorado River.",
+          "A long hike into the Grand Canyon with Vishnu Temple rising above the Colorado River`.",
         tags: ["Outdoor", "Moab", "Big Sky", "Enchantments", "etc"],
       },
     ],
