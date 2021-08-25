@@ -59,13 +59,14 @@ const PhotoPage = ({ photos, paragraph, title }) => {
                     </Button>
                   </Paper>
                 </Grid>
-                {photos.map(({ title, src, description }) => (
+                {photos.map(({ title, src, description, position }) => (
                   <Grid key={title} item xs={12}>
                     <PhotoPageCard
                       key={title}
                       title={title}
                       image={src}
                       description={description}
+                      width={position}
                     ></PhotoPageCard>
                   </Grid>
                 ))}

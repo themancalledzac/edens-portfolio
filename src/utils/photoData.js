@@ -11,6 +11,7 @@ const PhotoData = [
         description:
           "Sunset in the Badlands, I found a nice high overlook over the Norbeck Pass.",
         tags: ["Outdoor", "Moab", "Big Sky", "Enchantments", "etc"],
+        position: "vertical",
       },
       {
         src: require("../assets/photography/event/Header1.jpg").default,
@@ -18,6 +19,7 @@ const PhotoData = [
         description:
           "Sunset in the Badlands, I found a nice high overlook over the Norbeck Pass.",
         tags: ["Outdoor", "Moab", "Big Sky", "Enchantments", "etc"],
+        position: "vertical",
       },
       {
         src: require("../assets/photography/event/Header1.jpg").default,
@@ -25,6 +27,7 @@ const PhotoData = [
         description:
           "Sunset in the Badlands, I found a nice high overlook over the Norbeck Pass.",
         tags: ["Outdoor", "Moab", "Big Sky", "Enchantments", "etc"],
+        position: "vertical",
       },
       {
         src: require("../assets/photography/event/Header1.jpg").default,
@@ -32,6 +35,7 @@ const PhotoData = [
         description:
           "Sunset in the Badlands, I found a nice high overlook over the Norbeck Pass.",
         tags: ["Outdoor", "Moab", "Big Sky", "Enchantments", "etc"],
+        position: "vertical",
       },
       {
         src: require("../assets/photography/event/Header1.jpg").default,
@@ -39,6 +43,7 @@ const PhotoData = [
         description:
           "Sunset in the Badlands, I found a nice high overlook over the Norbeck Pass.",
         tags: ["Outdoor", "Moab", "Big Sky", "Enchantments", "etc"],
+        position: "vertical",
       },
       {
         src: require("../assets/photography/event/Header1.jpg").default,
@@ -46,6 +51,7 @@ const PhotoData = [
         description:
           "Sunset in the Badlands, I found a nice high overlook over the Norbeck Pass.",
         tags: ["Outdoor", "Moab", "Big Sky", "Enchantments", "etc"],
+        position: "vertical",
       },
       {
         src: require("../assets/photography/event/Header1.jpg").default,
@@ -53,6 +59,7 @@ const PhotoData = [
         description:
           "Sunset in the Badlands, I found a nice high overlook over the Norbeck Pass.",
         tags: ["Outdoor", "Moab", "Big Sky", "Enchantments", "etc"],
+        position: "vertical",
       },
       {
         src: require("../assets/photography/event/Header1.jpg").default,
@@ -60,6 +67,7 @@ const PhotoData = [
         description:
           "Sunset in the Badlands, I found a nice high overlook over the Norbeck Pass.",
         tags: ["Outdoor", "Moab", "Big Sky", "Enchantments", "etc"],
+        position: "vertical",
       },
       {
         src: require("../assets/photography/event/Header1.jpg").default,
@@ -67,6 +75,7 @@ const PhotoData = [
         description:
           "Sunset in the Badlands, I found a nice high overlook over the Norbeck Pass.",
         tags: ["Outdoor", "Moab", "Big Sky", "Enchantments", "etc"],
+        position: "vertical",
       },
       {
         src: require("../assets/photography/event/Header1.jpg").default,
@@ -74,6 +83,7 @@ const PhotoData = [
         description:
           "Sunset in the Badlands, I found a nice high overlook over the Norbeck Pass.",
         tags: ["Outdoor", "Moab", "Big Sky", "Enchantments", "etc"],
+        position: "vertical",
       },
     ],
   },
@@ -89,6 +99,7 @@ const PhotoData = [
         description:
           "Sunset in the Badlands, I found a nice high overlook over the Norbeck Pass.",
         tags: ["Outdoor", "Moab", "Big Sky", "Enchantments", "etc"],
+        position: "vertical",
       },
       {
         src: require("../assets/photography/portrait/Header1.jpg").default,
@@ -96,6 +107,7 @@ const PhotoData = [
         description:
           "Sunset in the Badlands, I found a nice high overlook over the Norbeck Pass.",
         tags: ["Outdoor", "Moab", "Big Sky", "Enchantments", "etc"],
+        position: "vertical",
       },
       {
         src: require("../assets/photography/portrait/Header1.jpg").default,
@@ -103,6 +115,7 @@ const PhotoData = [
         description:
           "Sunset in the Badlands, I found a nice high overlook over the Norbeck Pass.",
         tags: ["Outdoor", "Moab", "Big Sky", "Enchantments", "etc"],
+        position: "vertical",
       },
       {
         src: require("../assets/photography/portrait/Header1.jpg").default,
@@ -110,6 +123,7 @@ const PhotoData = [
         description:
           "Sunset in the Badlands, I found a nice high overlook over the Norbeck Pass.",
         tags: ["Outdoor", "Moab", "Big Sky", "Enchantments", "etc"],
+        position: "vertical",
       },
       {
         src: require("../assets/photography/portrait/Header1.jpg").default,
@@ -117,6 +131,7 @@ const PhotoData = [
         description:
           "Sunset in the Badlands, I found a nice high overlook over the Norbeck Pass.",
         tags: ["Outdoor", "Moab", "Big Sky", "Enchantments", "etc"],
+        position: "vertical",
       },
       {
         src: require("../assets/photography/portrait/Header1.jpg").default,
@@ -124,6 +139,7 @@ const PhotoData = [
         description:
           "Sunset in the Badlands, I found a nice high overlook over the Norbeck Pass.",
         tags: ["Outdoor", "Moab", "Big Sky", "Enchantments", "etc"],
+        position: "vertical",
       },
       {
         src: require("../assets/photography/portrait/Header1.jpg").default,
@@ -131,6 +147,7 @@ const PhotoData = [
         description:
           "Sunset in the Badlands, I found a nice high overlook over the Norbeck Pass.",
         tags: ["Outdoor", "Moab", "Big Sky", "Enchantments", "etc"],
+        position: "vertical",
       },
       {
         src: require("../assets/photography/portrait/Header1.jpg").default,
@@ -138,6 +155,7 @@ const PhotoData = [
         description:
           "Sunset in the Badlands, I found a nice high overlook over the Norbeck Pass.",
         tags: ["Outdoor", "Moab", "Big Sky", "Enchantments", "etc"],
+        position: "vertical",
       },
       {
         src: require("../assets/photography/portrait/Header1.jpg").default,
@@ -145,6 +163,7 @@ const PhotoData = [
         description:
           "Sunset in the Badlands, I found a nice high overlook over the Norbeck Pass.",
         tags: ["Outdoor", "Moab", "Big Sky", "Enchantments", "etc"],
+        position: "vertical",
       },
       {
         src: require("../assets/photography/portrait/Header1.jpg").default,
@@ -152,6 +171,7 @@ const PhotoData = [
         description:
           "Sunset in the Badlands, I found a nice high overlook over the Norbeck Pass.",
         tags: ["Outdoor", "Moab", "Big Sky", "Enchantments", "etc"],
+        position: "vertical",
       },
     ],
   },
@@ -167,6 +187,7 @@ const PhotoData = [
         description:
           "Sunset in the Badlands, I found a nice high overlook over the Norbeck Pass.",
         tags: ["Outdoor", "Moab", "Big Sky", "Enchantments", "etc"],
+        position: "vertical",
       },
       {
         src: require("../assets/photography/street/Header1.jpg").default,
@@ -174,6 +195,7 @@ const PhotoData = [
         description:
           "Sunset in the Badlands, I found a nice high overlook over the Norbeck Pass.",
         tags: ["Outdoor", "Moab", "Big Sky", "Enchantments", "etc"],
+        position: "vertical",
       },
       {
         src: require("../assets/photography/street/Header1.jpg").default,
@@ -181,6 +203,7 @@ const PhotoData = [
         description:
           "Sunset in the Badlands, I found a nice high overlook over the Norbeck Pass.",
         tags: ["Outdoor", "Moab", "Big Sky", "Enchantments", "etc"],
+        position: "vertical",
       },
       {
         src: require("../assets/photography/street/Header1.jpg").default,
@@ -188,6 +211,7 @@ const PhotoData = [
         description:
           "Sunset in the Badlands, I found a nice high overlook over the Norbeck Pass.",
         tags: ["Outdoor", "Moab", "Big Sky", "Enchantments", "etc"],
+        position: "vertical",
       },
       {
         src: require("../assets/photography/street/Header1.jpg").default,
@@ -195,6 +219,7 @@ const PhotoData = [
         description:
           "Sunset in the Badlands, I found a nice high overlook over the Norbeck Pass.",
         tags: ["Outdoor", "Moab", "Big Sky", "Enchantments", "etc"],
+        position: "vertical",
       },
       {
         src: require("../assets/photography/street/Header1.jpg").default,
@@ -202,6 +227,7 @@ const PhotoData = [
         description:
           "Sunset in the Badlands, I found a nice high overlook over the Norbeck Pass.",
         tags: ["Outdoor", "Moab", "Big Sky", "Enchantments", "etc"],
+        position: "vertical",
       },
       {
         src: require("../assets/photography/street/Header1.jpg").default,
@@ -209,6 +235,7 @@ const PhotoData = [
         description:
           "Sunset in the Badlands, I found a nice high overlook over the Norbeck Pass.",
         tags: ["Outdoor", "Moab", "Big Sky", "Enchantments", "etc"],
+        position: "vertical",
       },
       {
         src: require("../assets/photography/street/Header1.jpg").default,
@@ -216,6 +243,7 @@ const PhotoData = [
         description:
           "Sunset in the Badlands, I found a nice high overlook over the Norbeck Pass.",
         tags: ["Outdoor", "Moab", "Big Sky", "Enchantments", "etc"],
+        position: "vertical",
       },
       {
         src: require("../assets/photography/street/Header1.jpg").default,
@@ -223,6 +251,7 @@ const PhotoData = [
         description:
           "Sunset in the Badlands, I found a nice high overlook over the Norbeck Pass.",
         tags: ["Outdoor", "Moab", "Big Sky", "Enchantments", "etc"],
+        position: "vertical",
       },
       {
         src: require("../assets/photography/street/Header1.jpg").default,
@@ -230,6 +259,7 @@ const PhotoData = [
         description:
           "Sunset in the Badlands, I found a nice high overlook over the Norbeck Pass.",
         tags: ["Outdoor", "Moab", "Big Sky", "Enchantments", "etc"],
+        position: "vertical",
       },
     ],
   },
@@ -248,6 +278,7 @@ const PhotoData = [
         description:
           "Sunset in the Badlands, I found a nice high overlook over the Norbeck Pass.",
         tags: ["Outdoor", "Moab", "Big Sky", "Enchantments", "etc"],
+        position: "horizontal",
       },
       {
         src: require("../assets/photography/landscape/DSC_0028-Edit.jpg")
@@ -256,6 +287,7 @@ const PhotoData = [
         description:
           "Sunset in the Badlands, I found a nice high overlook over the Norbeck Pass.",
         tags: ["Outdoor", "Moab", "Big Sky", "Enchantments", "etc"],
+        position: "vertical",
       },
       {
         src: require("../assets/photography/landscape/DSC_0387-Pano.jpg")
@@ -264,12 +296,14 @@ const PhotoData = [
         description:
           "This is the location and meaning behind this Sunrise Delicate Arch in Arches National Park. Parking lot was almost full by the time I arrived.",
         tags: ["Outdoor", "Moab", "Arches", "Tourists"],
+        position: "horizontal",
       },
       {
         src: require("../assets/photography/landscape/DSC_0487.jpg").default,
         title: "Arches National park, road with arch in the background.",
         description: "On the way to Devil's Garden in Arches National park.",
         tags: ["Outdoor", "Moab", "Arches", "etc"],
+        position: "vertical",
       },
       {
         src: require("../assets/photography/landscape/DSC_0547.jpg").default,
@@ -277,18 +311,21 @@ const PhotoData = [
         description:
           "The first mile of Devil's Garden in Arches National Park.",
         tags: ["Outdoor", "Moab", "Arches", "etc"],
+        position: "vertical",
       },
       {
         src: require("../assets/photography/landscape/DSC_0618.jpg").default,
         title: "A Tree in Arches National Park.",
         description: "Arches National Park.",
         tags: ["Outdoor", "Moab", "Big Sky", "Enchantments", "etc"],
+        position: "vertical",
       },
       {
         src: require("../assets/photography/landscape/DSC_0667.jpg").default,
         title: "A tree deep in Arches National Park.",
         description: "Arches National Park, next to Navajo Arch.",
         tags: ["Outdoor", "Moab", "Big Sky", "Enchantments", "etc"],
+        position: "vertical",
       },
       {
         src: require("../assets/photography/landscape/DSC_0682.jpg").default,
@@ -296,6 +333,7 @@ const PhotoData = [
         description:
           "A woman overlooks Devil's Garden in Arches National Park.",
         tags: ["Outdoor", "Moab", "Big Sky", "Enchantments", "etc"],
+        position: "horizontal",
       },
       {
         src: require("../assets/photography/landscape/DSC_0874.jpg").default,
@@ -303,6 +341,7 @@ const PhotoData = [
         description:
           "A man climbs up the rocks at Devil's Garden in Arches National Park.",
         tags: ["Outdoor", "Moab", "Big Sky", "Enchantments", "etc"],
+        position: "vertical",
       },
       {
         src: require("../assets/photography/landscape/DSC_0997-Edit.jpg")
@@ -310,6 +349,7 @@ const PhotoData = [
         title: "An abandoned house in Monument Valley.",
         description: "An abandoned looking building in Monument Valley.",
         tags: ["Outdoor", "Moab", "Big Sky", "Enchantments", "etc"],
+        position: "vertical",
       },
       {
         src: require("../assets/photography/landscape/DSC_0998.jpg").default,
@@ -317,12 +357,14 @@ const PhotoData = [
         description:
           "Monument valley with a monumental cloud in the background.",
         tags: ["Outdoor", "Moab", "Big Sky", "Enchantments", "etc"],
+        position: "vertical",
       },
       {
         src: require("../assets/photography/landscape/DSC_1226.jpg").default,
         title: "Sunrise at Grand Canyon",
         description: " couple at sunrise at the Grand Canyon.",
         tags: ["Outdoor", "Moab", "Big Sky", "Enchantments", "etc"],
+        position: "vertical",
       },
       {
         src: require("../assets/photography/landscape/DSC_1485.jpg").default,
@@ -330,6 +372,7 @@ const PhotoData = [
         description:
           "A long hike into the Grand Canyon with Vishnu Temple rising above the Colorado River`.",
         tags: ["Outdoor", "Moab", "Big Sky", "Enchantments", "etc"],
+        position: "vertical",
       },
     ],
   },
