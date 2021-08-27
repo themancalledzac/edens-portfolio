@@ -29,12 +29,14 @@ const useStyles = makeStyles(() => ({
   container: {
     paddingLeft: "0",
     paddingRight: "0",
-    alignContent: "center",
-    alignItems: "center",
+    // alignContent: "center",
+    // alignItems: "center",
   },
   description: {
     padding: "5px",
-    margin: "auto",
+    margin: "0",
+    marginLeft: "auto",
+    marginRight: "auto",
     textAlign: "center",
     backgroundColor: colors.grey1,
     borderRadius: "0px 0px 5px 5px",
@@ -47,30 +49,39 @@ const useStyles = makeStyles(() => ({
 
 const PhotoPageCard = ({ key, title, image, description, width }) => {
   const classes = useStyles();
-  const [imWid, setImWid] = useState("665.5px");
+  // const [imgWid, setImgWid] = useState("665.5px");
+  // const loadWidth = (width) => {
+  //   if (width === "vertical") {
+  //     setImgWid("665.5px");
+  //     console.log("vertical");
+  //   } else if ({ width } === "horizontal") {
+  //     setImgWid("912px");
+  //     console.log("horizontal");
+  //   }
+  // };
   // const imgWidth = "665.5px";
-  const changeWidth = async (width) => {
-    if (width === "vertical") {
-      setImWid("665.5px");
-    } else if (width === "horizontal") {
-      setImWid("912px");
-    }
-  };
+  // const changeWidth = async (width) => {
+  //   if (width === "vertical") {
+  //     setImWid("665.5px");
+  //   } else if (width === "horizontal") {
+  //     setImWid("912px");
+  //   }
+  // };
+  // const imgRef = React.createRef();
+  // const imgageWidth = imgRef.current.offsetWidth;
+  // console.log(imgageWidth);
 
   return (
     <div key={key} className={classes.root}>
       <Container className={classes.container} maxWidth='lg'>
         <Grid container spacing={3}>
           <Grid className={classes.container} item xs={12}>
-            <img
-              src={image}
-              alt={title}
-              className={classes.image}
-              onLoad={() => changeWidth(width)}
-            />
-            <h4 className={classes.description} style={{ width: imWid }}>
-              {description}
-            </h4>
+            <div>
+              <img src={image} alt={title} className={classes.image} />
+              <h4 className={classes.description} style={{ maxWidth: width }}>
+                {description}
+              </h4>
+            </div>
           </Grid>
         </Grid>
       </Container>
