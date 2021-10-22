@@ -6,6 +6,7 @@ import colors from "../components/colors";
 // import { useSelector, useDispatch } from "react-redux";
 import photoPageData from "../utils/photoPageData";
 import PhotoCard from "../components/PhotoCard";
+import headerImage from "../assets/photography/landscape/DSC_0009.jpg";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -20,10 +21,15 @@ const useStyles = makeStyles((theme) => ({
   },
   header: {
     padding: theme.spacing(2),
-    marginTop: "20px",
+    marginTop: "5rem",
     textAlign: "center",
     color: colors.white,
-    backgroundColor: colors.blue,
+    // backgroundColor: colors.blue,
+    backgroundImage: `url(${headerImage})`,
+    backgroundPosition: "top",
+    width: "100%",
+    backgroundSize: "cover",
+    height: "22rem",
   },
   phoneNumber: {
     textDecoration: "none",
