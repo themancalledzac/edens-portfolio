@@ -1,4 +1,11 @@
-import { Button, Container, Grid, makeStyles, Paper } from "@material-ui/core";
+import {
+  Button,
+  Container,
+  Grid,
+  makeStyles,
+  Paper,
+  Typography,
+} from "@material-ui/core";
 import React from "react";
 // import { HOME_PHOTO_FULL } from "../utils/actions";
 // import { useStoreContext } from "../utils/GlobalState";
@@ -23,6 +30,9 @@ const useStyles = makeStyles((theme) => ({
     padding: theme.spacing(2),
     marginTop: "5rem",
     textAlign: "center",
+    justifyContent: "center",
+    display: "flex",
+    alignItems: "center",
     color: colors.white,
     // backgroundColor: colors.blue,
     backgroundImage: `url(${headerImage})`,
@@ -30,6 +40,9 @@ const useStyles = makeStyles((theme) => ({
     width: "100%",
     backgroundSize: "cover",
     height: "22rem",
+    borderRadius: ".6rem",
+    // transform: "translateZ(-50px) scale(2)",
+    // position: "absolute",
   },
   phoneNumber: {
     textDecoration: "none",
@@ -44,6 +57,23 @@ const useStyles = makeStyles((theme) => ({
       cursor: "pointer",
     },
   },
+  title: {
+    // position: "absolute",
+    alignItems: "center",
+    alignContent: "center",
+    textAlign: "center",
+    zIndex: "1",
+    fontSize: "3rem",
+  },
+  parallax_container: {
+    // alignItems: "center",
+    // height: "50rem",
+    // perspective: "500px",
+    // perspectiveOrigin: "0 0",
+    // overflowX: "hidden",
+    // overflowY: "auto",
+    // position: "relative",
+  },
 }));
 // <Grid item xs={12} sm={state.home.photo.gridWidth}>
 
@@ -57,14 +87,16 @@ export default function Photography() {
           <Grid item xs={12} sm={12}>
             <div className={classes.root}>
               <Grid container spacing={3}>
-                <Grid item xs={12}>
-                  <Button
+                <Grid item xs={12} className={classes.parallax_container}>
+                  <div
                     style={{ width: "100%" }}
-                    className={(classes.paper, classes.header)}
+                    className={classes.header}
                     // onClick={() => fullChange()}
                   >
-                    Photography
-                  </Button>
+                    <Typography varient='h1' noWrap className={classes.title}>
+                      Photography
+                    </Typography>
+                  </div>
                 </Grid>
                 <Grid item xs={12}>
                   <Paper className={classes.infos}>
